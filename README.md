@@ -5,6 +5,7 @@
 
 ### How to run
 1. Clone the repo `git clone https://github.com/a6kme/static_analyzer`
+1. Pull the docker image `docker pull a6kme/static-analyzer-py`
 1. Install the dependencies `pip install -r api/requirements.txt`
 1. Run the analyzer
 ```
