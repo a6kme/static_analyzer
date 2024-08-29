@@ -4,8 +4,8 @@
 1. python3
 
 ### How to run
-1. Clone the repo
-1. Install the dependencies
+1. Clone the repo `git clone https://github.com/a6kme/static_analyzer`
+1. Install the dependencies `pip install -r api/requirements.txt'
 1. Run the analyzer
 ```
 from api.src.analyzer import StaticAnalyzer
