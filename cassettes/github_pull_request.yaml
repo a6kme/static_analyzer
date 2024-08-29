@@ -1,0 +1,702 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - PyGithub/Python
+    method: GET
+    uri: https://api.github.com/repos/adeyosemanputra/pygoat
+  response:
+    body:
+      string: '{"id":265372074,"node_id":"MDEwOlJlcG9zaXRvcnkyNjUzNzIwNzQ=","name":"pygoat","full_name":"adeyosemanputra/pygoat","private":false,"owner":{"login":"adeyosemanputra","id":24958168,"node_id":"MDQ6VXNlcjI0OTU4MTY4","avatar_url":"https://avatars.githubusercontent.com/u/24958168?v=4","gravatar_id":"","url":"https://api.github.com/users/adeyosemanputra","html_url":"https://github.com/adeyosemanputra","followers_url":"https://api.github.com/users/adeyosemanputra/followers","following_url":"https://api.github.com/users/adeyosemanputra/following{/other_user}","gists_url":"https://api.github.com/users/adeyosemanputra/gists{/gist_id}","starred_url":"https://api.github.com/users/adeyosemanputra/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/adeyosemanputra/subscriptions","organizations_url":"https://api.github.com/users/adeyosemanputra/orgs","repos_url":"https://api.github.com/users/adeyosemanputra/repos","events_url":"https://api.github.com/users/adeyosemanputra/events{/privacy}","received_events_url":"https://api.github.com/users/adeyosemanputra/received_events","type":"User","site_admin":false},"html_url":"https://github.com/adeyosemanputra/pygoat","description":"intentionally
+        vuln web Application Security in django","fork":false,"url":"https://api.github.com/repos/adeyosemanputra/pygoat","forks_url":"https://api.github.com/repos/adeyosemanputra/pygoat/forks","keys_url":"https://api.github.com/repos/adeyosemanputra/pygoat/keys{/key_id}","collaborators_url":"https://api.github.com/repos/adeyosemanputra/pygoat/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/adeyosemanputra/pygoat/teams","hooks_url":"https://api.github.com/repos/adeyosemanputra/pygoat/hooks","issue_events_url":"https://api.github.com/repos/adeyosemanputra/pygoat/issues/events{/number}","events_url":"https://api.github.com/repos/adeyosemanputra/pygoat/events","assignees_url":"https://api.github.com/repos/adeyosemanputra/pygoat/assignees{/user}","branches_url":"https://api.github.com/repos/adeyosemanputra/pygoat/branches{/branch}","tags_url":"https://api.github.com/repos/adeyosemanputra/pygoat/tags","blobs_url":"https://api.github.com/repos/adeyosemanputra/pygoat/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/adeyosemanputra/pygoat/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/adeyosemanputra/pygoat/git/refs{/sha}","trees_url":"https://api.github.com/repos/adeyosemanputra/pygoat/git/trees{/sha}","statuses_url":"https://api.github.com/repos/adeyosemanputra/pygoat/statuses/{sha}","languages_url":"https://api.github.com/repos/adeyosemanputra/pygoat/languages","stargazers_url":"https://api.github.com/repos/adeyosemanputra/pygoat/stargazers","contributors_url":"https://api.github.com/repos/adeyosemanputra/pygoat/contributors","subscribers_url":"https://api.github.com/repos/adeyosemanputra/pygoat/subscribers","subscription_url":"https://api.github.com/repos/adeyosemanputra/pygoat/subscription","commits_url":"https://api.github.com/repos/adeyosemanputra/pygoat/commits{/sha}","git_commits_url":"https://api.github.com/repos/adeyosemanputra/pygoat/git/commits{/sha}","comments_url":"https://api.github.com/repos/adeyosemanputra/pygoat/comments{/number}","issue_comment_url":"https://api.github.com/repos/adeyosemanputra/pygoat/issues/comments{/number}","contents_url":"https://api.github.com/repos/adeyosemanputra/pygoat/contents/{+path}","compare_url":"https://api.github.com/repos/adeyosemanputra/pygoat/compare/{base}...{head}","merges_url":"https://api.github.com/repos/adeyosemanputra/pygoat/merges","archive_url":"https://api.github.com/repos/adeyosemanputra/pygoat/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/adeyosemanputra/pygoat/downloads","issues_url":"https://api.github.com/repos/adeyosemanputra/pygoat/issues{/number}","pulls_url":"https://api.github.com/repos/adeyosemanputra/pygoat/pulls{/number}","milestones_url":"https://api.github.com/repos/adeyosemanputra/pygoat/milestones{/number}","notifications_url":"https://api.github.com/repos/adeyosemanputra/pygoat/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/adeyosemanputra/pygoat/labels{/name}","releases_url":"https://api.github.com/repos/adeyosemanputra/pygoat/releases{/id}","deployments_url":"https://api.github.com/repos/adeyosemanputra/pygoat/deployments","created_at":"2020-05-19T21:32:23Z","updated_at":"2024-08-26T09:07:27Z","pushed_at":"2024-05-30T01:24:57Z","git_url":"git://github.com/adeyosemanputra/pygoat.git","ssh_url":"git@github.com:adeyosemanputra/pygoat.git","clone_url":"https://github.com/adeyosemanputra/pygoat.git","svn_url":"https://github.com/adeyosemanputra/pygoat","homepage":"https://appsec.asia","size":18268,"stargazers_count":205,"watchers_count":205,"language":"HTML","has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"has_discussions":false,"forks_count":722,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":14,"license":null,"allow_forking":true,"is_template":false,"web_commit_signoff_required":false,"topics":[],"visibility":"public","forks":722,"open_issues":14,"watchers":205,"default_branch":"master","temp_clone_token":null,"network_count":722,"subscribers_count":7}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO,
+        X-GitHub-Request-Id, Deprecation, Sunset
+      Cache-Control:
+      - public, max-age=60, s-maxage=60
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '1309'
+      Content-Security-Policy:
+      - default-src 'none'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 29 Aug 2024 11:49:55 GMT
+      ETag:
+      - W/"80e04aed08c75405ff23999e4cd9e2a022aa81ad07a52cbec9ce3c43920e4483"
+      Last-Modified:
+      - Mon, 26 Aug 2024 09:07:27 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Server:
+      - github.com
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      Vary:
+      - Accept,Accept-Encoding, Accept, X-Requested-With
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-GitHub-Request-Id:
+      - 4B66:377F32:694FC0:6F7900:66D06063
+      X-RateLimit-Limit:
+      - '60'
+      X-RateLimit-Remaining:
+      - '59'
+      X-RateLimit-Reset:
+      - '1724935795'
+      X-RateLimit-Resource:
+      - core
+      X-RateLimit-Used:
+      - '1'
+      X-XSS-Protection:
+      - '0'
+      x-github-api-version-selected:
+      - '2022-11-28'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - PyGithub/Python
+    method: GET
+    uri: https://api.github.com/repos/adeyosemanputra/pygoat/pulls/11
+  response:
+    body:
+      string: '{"url":"https://api.github.com/repos/adeyosemanputra/pygoat/pulls/11","id":616092677,"node_id":"MDExOlB1bGxSZXF1ZXN0NjE2MDkyNjc3","html_url":"https://github.com/adeyosemanputra/pygoat/pull/11","diff_url":"https://github.com/adeyosemanputra/pygoat/pull/11.diff","patch_url":"https://github.com/adeyosemanputra/pygoat/pull/11.patch","issue_url":"https://api.github.com/repos/adeyosemanputra/pygoat/issues/11","number":11,"state":"closed","locked":false,"title":"SQL
+        Lab Creation","user":{"login":"pwned-17","id":61360833,"node_id":"MDQ6VXNlcjYxMzYwODMz","avatar_url":"https://avatars.githubusercontent.com/u/61360833?v=4","gravatar_id":"","url":"https://api.github.com/users/pwned-17","html_url":"https://github.com/pwned-17","followers_url":"https://api.github.com/users/pwned-17/followers","following_url":"https://api.github.com/users/pwned-17/following{/other_user}","gists_url":"https://api.github.com/users/pwned-17/gists{/gist_id}","starred_url":"https://api.github.com/users/pwned-17/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/pwned-17/subscriptions","organizations_url":"https://api.github.com/users/pwned-17/orgs","repos_url":"https://api.github.com/users/pwned-17/repos","events_url":"https://api.github.com/users/pwned-17/events{/privacy}","received_events_url":"https://api.github.com/users/pwned-17/received_events","type":"User","site_admin":false},"body":"Have
+        completed a SQL Injection lab type 1, dummy information added, need to add
+        valid information in description.","created_at":"2021-04-15T14:20:14Z","updated_at":"2021-04-15T20:36:07Z","closed_at":"2021-04-15T20:36:07Z","merged_at":"2021-04-15T20:36:07Z","merge_commit_sha":"b7c37d84d783aa77bb82a4a8a25cc2229b9fb6a0","assignee":null,"assignees":[],"requested_reviewers":[],"requested_teams":[],"labels":[],"milestone":null,"draft":false,"commits_url":"https://api.github.com/repos/adeyosemanputra/pygoat/pulls/11/commits","review_comments_url":"https://api.github.com/repos/adeyosemanputra/pygoat/pulls/11/comments","review_comment_url":"https://api.github.com/repos/adeyosemanputra/pygoat/pulls/comments{/number}","comments_url":"https://api.github.com/repos/adeyosemanputra/pygoat/issues/11/comments","statuses_url":"https://api.github.com/repos/adeyosemanputra/pygoat/statuses/3e140c898082fbbbf2869b104d700952b108d727","head":{"label":"pwned-17:master","ref":"master","sha":"3e140c898082fbbbf2869b104d700952b108d727","user":{"login":"pwned-17","id":61360833,"node_id":"MDQ6VXNlcjYxMzYwODMz","avatar_url":"https://avatars.githubusercontent.com/u/61360833?v=4","gravatar_id":"","url":"https://api.github.com/users/pwned-17","html_url":"https://github.com/pwned-17","followers_url":"https://api.github.com/users/pwned-17/followers","following_url":"https://api.github.com/users/pwned-17/following{/other_user}","gists_url":"https://api.github.com/users/pwned-17/gists{/gist_id}","starred_url":"https://api.github.com/users/pwned-17/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/pwned-17/subscriptions","organizations_url":"https://api.github.com/users/pwned-17/orgs","repos_url":"https://api.github.com/users/pwned-17/repos","events_url":"https://api.github.com/users/pwned-17/events{/privacy}","received_events_url":"https://api.github.com/users/pwned-17/received_events","type":"User","site_admin":false},"repo":{"id":357424633,"node_id":"MDEwOlJlcG9zaXRvcnkzNTc0MjQ2MzM=","name":"pygoat","full_name":"pwned-17/pygoat","private":false,"owner":{"login":"pwned-17","id":61360833,"node_id":"MDQ6VXNlcjYxMzYwODMz","avatar_url":"https://avatars.githubusercontent.com/u/61360833?v=4","gravatar_id":"","url":"https://api.github.com/users/pwned-17","html_url":"https://github.com/pwned-17","followers_url":"https://api.github.com/users/pwned-17/followers","following_url":"https://api.github.com/users/pwned-17/following{/other_user}","gists_url":"https://api.github.com/users/pwned-17/gists{/gist_id}","starred_url":"https://api.github.com/users/pwned-17/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/pwned-17/subscriptions","organizations_url":"https://api.github.com/users/pwned-17/orgs","repos_url":"https://api.github.com/users/pwned-17/repos","events_url":"https://api.github.com/users/pwned-17/events{/privacy}","received_events_url":"https://api.github.com/users/pwned-17/received_events","type":"User","site_admin":false},"html_url":"https://github.com/pwned-17/pygoat","description":"intentionally
+        vuln web Application Security in flask or django","fork":true,"url":"https://api.github.com/repos/pwned-17/pygoat","forks_url":"https://api.github.com/repos/pwned-17/pygoat/forks","keys_url":"https://api.github.com/repos/pwned-17/pygoat/keys{/key_id}","collaborators_url":"https://api.github.com/repos/pwned-17/pygoat/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/pwned-17/pygoat/teams","hooks_url":"https://api.github.com/repos/pwned-17/pygoat/hooks","issue_events_url":"https://api.github.com/repos/pwned-17/pygoat/issues/events{/number}","events_url":"https://api.github.com/repos/pwned-17/pygoat/events","assignees_url":"https://api.github.com/repos/pwned-17/pygoat/assignees{/user}","branches_url":"https://api.github.com/repos/pwned-17/pygoat/branches{/branch}","tags_url":"https://api.github.com/repos/pwned-17/pygoat/tags","blobs_url":"https://api.github.com/repos/pwned-17/pygoat/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/pwned-17/pygoat/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/pwned-17/pygoat/git/refs{/sha}","trees_url":"https://api.github.com/repos/pwned-17/pygoat/git/trees{/sha}","statuses_url":"https://api.github.com/repos/pwned-17/pygoat/statuses/{sha}","languages_url":"https://api.github.com/repos/pwned-17/pygoat/languages","stargazers_url":"https://api.github.com/repos/pwned-17/pygoat/stargazers","contributors_url":"https://api.github.com/repos/pwned-17/pygoat/contributors","subscribers_url":"https://api.github.com/repos/pwned-17/pygoat/subscribers","subscription_url":"https://api.github.com/repos/pwned-17/pygoat/subscription","commits_url":"https://api.github.com/repos/pwned-17/pygoat/commits{/sha}","git_commits_url":"https://api.github.com/repos/pwned-17/pygoat/git/commits{/sha}","comments_url":"https://api.github.com/repos/pwned-17/pygoat/comments{/number}","issue_comment_url":"https://api.github.com/repos/pwned-17/pygoat/issues/comments{/number}","contents_url":"https://api.github.com/repos/pwned-17/pygoat/contents/{+path}","compare_url":"https://api.github.com/repos/pwned-17/pygoat/compare/{base}...{head}","merges_url":"https://api.github.com/repos/pwned-17/pygoat/merges","archive_url":"https://api.github.com/repos/pwned-17/pygoat/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/pwned-17/pygoat/downloads","issues_url":"https://api.github.com/repos/pwned-17/pygoat/issues{/number}","pulls_url":"https://api.github.com/repos/pwned-17/pygoat/pulls{/number}","milestones_url":"https://api.github.com/repos/pwned-17/pygoat/milestones{/number}","notifications_url":"https://api.github.com/repos/pwned-17/pygoat/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/pwned-17/pygoat/labels{/name}","releases_url":"https://api.github.com/repos/pwned-17/pygoat/releases{/id}","deployments_url":"https://api.github.com/repos/pwned-17/pygoat/deployments","created_at":"2021-04-13T04:34:37Z","updated_at":"2022-04-26T15:57:25Z","pushed_at":"2022-04-26T16:08:03Z","git_url":"git://github.com/pwned-17/pygoat.git","ssh_url":"git@github.com:pwned-17/pygoat.git","clone_url":"https://github.com/pwned-17/pygoat.git","svn_url":"https://github.com/pwned-17/pygoat","homepage":"https://owasp.org/www-project-pygoat","size":272,"stargazers_count":0,"watchers_count":0,"language":"HTML","has_issues":false,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"has_discussions":false,"forks_count":0,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":0,"license":null,"allow_forking":true,"is_template":false,"web_commit_signoff_required":false,"topics":[],"visibility":"public","forks":0,"open_issues":0,"watchers":0,"default_branch":"master"}},"base":{"label":"adeyosemanputra:master","ref":"master","sha":"a012997a539e91c4839eda887234867ae72fabbd","user":{"login":"adeyosemanputra","id":24958168,"node_id":"MDQ6VXNlcjI0OTU4MTY4","avatar_url":"https://avatars.githubusercontent.com/u/24958168?v=4","gravatar_id":"","url":"https://api.github.com/users/adeyosemanputra","html_url":"https://github.com/adeyosemanputra","followers_url":"https://api.github.com/users/adeyosemanputra/followers","following_url":"https://api.github.com/users/adeyosemanputra/following{/other_user}","gists_url":"https://api.github.com/users/adeyosemanputra/gists{/gist_id}","starred_url":"https://api.github.com/users/adeyosemanputra/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/adeyosemanputra/subscriptions","organizations_url":"https://api.github.com/users/adeyosemanputra/orgs","repos_url":"https://api.github.com/users/adeyosemanputra/repos","events_url":"https://api.github.com/users/adeyosemanputra/events{/privacy}","received_events_url":"https://api.github.com/users/adeyosemanputra/received_events","type":"User","site_admin":false},"repo":{"id":265372074,"node_id":"MDEwOlJlcG9zaXRvcnkyNjUzNzIwNzQ=","name":"pygoat","full_name":"adeyosemanputra/pygoat","private":false,"owner":{"login":"adeyosemanputra","id":24958168,"node_id":"MDQ6VXNlcjI0OTU4MTY4","avatar_url":"https://avatars.githubusercontent.com/u/24958168?v=4","gravatar_id":"","url":"https://api.github.com/users/adeyosemanputra","html_url":"https://github.com/adeyosemanputra","followers_url":"https://api.github.com/users/adeyosemanputra/followers","following_url":"https://api.github.com/users/adeyosemanputra/following{/other_user}","gists_url":"https://api.github.com/users/adeyosemanputra/gists{/gist_id}","starred_url":"https://api.github.com/users/adeyosemanputra/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/adeyosemanputra/subscriptions","organizations_url":"https://api.github.com/users/adeyosemanputra/orgs","repos_url":"https://api.github.com/users/adeyosemanputra/repos","events_url":"https://api.github.com/users/adeyosemanputra/events{/privacy}","received_events_url":"https://api.github.com/users/adeyosemanputra/received_events","type":"User","site_admin":false},"html_url":"https://github.com/adeyosemanputra/pygoat","description":"intentionally
+        vuln web Application Security in django","fork":false,"url":"https://api.github.com/repos/adeyosemanputra/pygoat","forks_url":"https://api.github.com/repos/adeyosemanputra/pygoat/forks","keys_url":"https://api.github.com/repos/adeyosemanputra/pygoat/keys{/key_id}","collaborators_url":"https://api.github.com/repos/adeyosemanputra/pygoat/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/adeyosemanputra/pygoat/teams","hooks_url":"https://api.github.com/repos/adeyosemanputra/pygoat/hooks","issue_events_url":"https://api.github.com/repos/adeyosemanputra/pygoat/issues/events{/number}","events_url":"https://api.github.com/repos/adeyosemanputra/pygoat/events","assignees_url":"https://api.github.com/repos/adeyosemanputra/pygoat/assignees{/user}","branches_url":"https://api.github.com/repos/adeyosemanputra/pygoat/branches{/branch}","tags_url":"https://api.github.com/repos/adeyosemanputra/pygoat/tags","blobs_url":"https://api.github.com/repos/adeyosemanputra/pygoat/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/adeyosemanputra/pygoat/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/adeyosemanputra/pygoat/git/refs{/sha}","trees_url":"https://api.github.com/repos/adeyosemanputra/pygoat/git/trees{/sha}","statuses_url":"https://api.github.com/repos/adeyosemanputra/pygoat/statuses/{sha}","languages_url":"https://api.github.com/repos/adeyosemanputra/pygoat/languages","stargazers_url":"https://api.github.com/repos/adeyosemanputra/pygoat/stargazers","contributors_url":"https://api.github.com/repos/adeyosemanputra/pygoat/contributors","subscribers_url":"https://api.github.com/repos/adeyosemanputra/pygoat/subscribers","subscription_url":"https://api.github.com/repos/adeyosemanputra/pygoat/subscription","commits_url":"https://api.github.com/repos/adeyosemanputra/pygoat/commits{/sha}","git_commits_url":"https://api.github.com/repos/adeyosemanputra/pygoat/git/commits{/sha}","comments_url":"https://api.github.com/repos/adeyosemanputra/pygoat/comments{/number}","issue_comment_url":"https://api.github.com/repos/adeyosemanputra/pygoat/issues/comments{/number}","contents_url":"https://api.github.com/repos/adeyosemanputra/pygoat/contents/{+path}","compare_url":"https://api.github.com/repos/adeyosemanputra/pygoat/compare/{base}...{head}","merges_url":"https://api.github.com/repos/adeyosemanputra/pygoat/merges","archive_url":"https://api.github.com/repos/adeyosemanputra/pygoat/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/adeyosemanputra/pygoat/downloads","issues_url":"https://api.github.com/repos/adeyosemanputra/pygoat/issues{/number}","pulls_url":"https://api.github.com/repos/adeyosemanputra/pygoat/pulls{/number}","milestones_url":"https://api.github.com/repos/adeyosemanputra/pygoat/milestones{/number}","notifications_url":"https://api.github.com/repos/adeyosemanputra/pygoat/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/adeyosemanputra/pygoat/labels{/name}","releases_url":"https://api.github.com/repos/adeyosemanputra/pygoat/releases{/id}","deployments_url":"https://api.github.com/repos/adeyosemanputra/pygoat/deployments","created_at":"2020-05-19T21:32:23Z","updated_at":"2024-08-26T09:07:27Z","pushed_at":"2024-05-30T01:24:57Z","git_url":"git://github.com/adeyosemanputra/pygoat.git","ssh_url":"git@github.com:adeyosemanputra/pygoat.git","clone_url":"https://github.com/adeyosemanputra/pygoat.git","svn_url":"https://github.com/adeyosemanputra/pygoat","homepage":"https://appsec.asia","size":18268,"stargazers_count":205,"watchers_count":205,"language":"HTML","has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"has_discussions":false,"forks_count":722,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":14,"license":null,"allow_forking":true,"is_template":false,"web_commit_signoff_required":false,"topics":[],"visibility":"public","forks":722,"open_issues":14,"watchers":205,"default_branch":"master"}},"_links":{"self":{"href":"https://api.github.com/repos/adeyosemanputra/pygoat/pulls/11"},"html":{"href":"https://github.com/adeyosemanputra/pygoat/pull/11"},"issue":{"href":"https://api.github.com/repos/adeyosemanputra/pygoat/issues/11"},"comments":{"href":"https://api.github.com/repos/adeyosemanputra/pygoat/issues/11/comments"},"review_comments":{"href":"https://api.github.com/repos/adeyosemanputra/pygoat/pulls/11/comments"},"review_comment":{"href":"https://api.github.com/repos/adeyosemanputra/pygoat/pulls/comments{/number}"},"commits":{"href":"https://api.github.com/repos/adeyosemanputra/pygoat/pulls/11/commits"},"statuses":{"href":"https://api.github.com/repos/adeyosemanputra/pygoat/statuses/3e140c898082fbbbf2869b104d700952b108d727"}},"author_association":"COLLABORATOR","auto_merge":null,"active_lock_reason":null,"merged":true,"mergeable":null,"rebaseable":null,"mergeable_state":"unknown","merged_by":{"login":"adeyosemanputra","id":24958168,"node_id":"MDQ6VXNlcjI0OTU4MTY4","avatar_url":"https://avatars.githubusercontent.com/u/24958168?v=4","gravatar_id":"","url":"https://api.github.com/users/adeyosemanputra","html_url":"https://github.com/adeyosemanputra","followers_url":"https://api.github.com/users/adeyosemanputra/followers","following_url":"https://api.github.com/users/adeyosemanputra/following{/other_user}","gists_url":"https://api.github.com/users/adeyosemanputra/gists{/gist_id}","starred_url":"https://api.github.com/users/adeyosemanputra/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/adeyosemanputra/subscriptions","organizations_url":"https://api.github.com/users/adeyosemanputra/orgs","repos_url":"https://api.github.com/users/adeyosemanputra/repos","events_url":"https://api.github.com/users/adeyosemanputra/events{/privacy}","received_events_url":"https://api.github.com/users/adeyosemanputra/received_events","type":"User","site_admin":false},"comments":0,"review_comments":0,"maintainer_can_modify":false,"commits":1,"additions":125,"deletions":8,"changed_files":11}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO,
+        X-GitHub-Request-Id, Deprecation, Sunset
+      Cache-Control:
+      - public, max-age=60, s-maxage=60
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - default-src 'none'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 29 Aug 2024 11:49:56 GMT
+      ETag:
+      - W/"ae88e4fe22c23c46e6aba7bcce2a0909a65de91c6fabbf6694b348bbb4e45944"
+      Last-Modified:
+      - Tue, 13 Aug 2024 05:43:14 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Server:
+      - github.com
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept,Accept-Encoding, Accept, X-Requested-With
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-GitHub-Request-Id:
+      - 2821:1A7E17:66192E:6C479B:66D06064
+      X-RateLimit-Limit:
+      - '60'
+      X-RateLimit-Remaining:
+      - '58'
+      X-RateLimit-Reset:
+      - '1724935795'
+      X-RateLimit-Resource:
+      - core
+      X-RateLimit-Used:
+      - '2'
+      X-XSS-Protection:
+      - '0'
+      x-github-api-version-selected:
+      - '2022-11-28'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - PyGithub/Python
+    method: GET
+    uri: https://api.github.com/repos/adeyosemanputra/pygoat/pulls/11/files
+  response:
+    body:
+      string: "[{\"sha\":\"771c70cc74ff3d0500fafab2fcd1960bec3ed23e\",\"filename\":\"pygoat/db.sqlite3\",\"status\":\"modified\",\"additions\":0,\"deletions\":0,\"changes\":0,\"blob_url\":\"https://github.com/adeyosemanputra/pygoat/blob/3e140c898082fbbbf2869b104d700952b108d727/pygoat%2Fdb.sqlite3\",\"raw_url\":\"https://github.com/adeyosemanputra/pygoat/raw/3e140c898082fbbbf2869b104d700952b108d727/pygoat%2Fdb.sqlite3\",\"contents_url\":\"https://api.github.com/repos/adeyosemanputra/pygoat/contents/pygoat%2Fdb.sqlite3?ref=3e140c898082fbbbf2869b104d700952b108d727\"},{\"sha\":\"00f3cac75d0e50f3fca4be96193061487206f73e\",\"filename\":\"pygoat/introduction/admin.py\",\"status\":\"modified\",\"additions\":3,\"deletions\":2,\"changes\":5,\"blob_url\":\"https://github.com/adeyosemanputra/pygoat/blob/3e140c898082fbbbf2869b104d700952b108d727/pygoat%2Fintroduction%2Fadmin.py\",\"raw_url\":\"https://github.com/adeyosemanputra/pygoat/raw/3e140c898082fbbbf2869b104d700952b108d727/pygoat%2Fintroduction%2Fadmin.py\",\"contents_url\":\"https://api.github.com/repos/adeyosemanputra/pygoat/contents/pygoat%2Fintroduction%2Fadmin.py?ref=3e140c898082fbbbf2869b104d700952b108d727\",\"patch\":\"@@
+        -1,6 +1,7 @@\\n from django.contrib import admin\\n-from .models import FAANG,info\\n+from
+        .models import FAANG,info,login\\n \\n # Register your models here.\\n admin.site.register(FAANG)\\n-admin.site.register(info)\\n\\\\
+        No newline at end of file\\n+admin.site.register(info)\\n+admin.site.register(login)\"},{\"sha\":\"2105619fbe9048ad2ffd9012f4bff5b156771508\",\"filename\":\"pygoat/introduction/models.py\",\"status\":\"modified\",\"additions\":4,\"deletions\":1,\"changes\":5,\"blob_url\":\"https://github.com/adeyosemanputra/pygoat/blob/3e140c898082fbbbf2869b104d700952b108d727/pygoat%2Fintroduction%2Fmodels.py\",\"raw_url\":\"https://github.com/adeyosemanputra/pygoat/raw/3e140c898082fbbbf2869b104d700952b108d727/pygoat%2Fintroduction%2Fmodels.py\",\"contents_url\":\"https://api.github.com/repos/adeyosemanputra/pygoat/contents/pygoat%2Fintroduction%2Fmodels.py?ref=3e140c898082fbbbf2869b104d700952b108d727\",\"patch\":\"@@
+        -9,8 +9,11 @@ def __str__(self):\\n \\n class info(models.Model):\\n     faang=models.ForeignKey(to=FAANG,on_delete=models.CASCADE)\\n+\\n
+        \    ceo=models.CharField(max_length=200)\\n     about=models.CharField(max_length=200)\\n
+        \\n-\\n+class login(models.Model):\\n+    user=models.CharField(max_length=200)\\n+
+        \   password=models.CharField(max_length=300)\\n \"},{\"sha\":\"521e76ad7365b627b3344696a5d54c713927fe51\",\"filename\":\"pygoat/introduction/static/Lab/xss.js\",\"status\":\"modified\",\"additions\":2,\"deletions\":0,\"changes\":2,\"blob_url\":\"https://github.com/adeyosemanputra/pygoat/blob/3e140c898082fbbbf2869b104d700952b108d727/pygoat%2Fintroduction%2Fstatic%2FLab%2Fxss.js\",\"raw_url\":\"https://github.com/adeyosemanputra/pygoat/raw/3e140c898082fbbbf2869b104d700952b108d727/pygoat%2Fintroduction%2Fstatic%2FLab%2Fxss.js\",\"contents_url\":\"https://api.github.com/repos/adeyosemanputra/pygoat/contents/pygoat%2Fintroduction%2Fstatic%2FLab%2Fxss.js?ref=3e140c898082fbbbf2869b104d700952b108d727\",\"patch\":\"@@
+        -12,3 +12,5 @@ for (i = 0; i < coll.length; i++) {\\n     }\\n   });\\n }\\n+p=document.getElementById(\\\"t\\\")\\n+p.innerHTML=\\\"alert(1)\\\"\\n\\\\
+        No newline at end of file\"},{\"sha\":\"b81ea9b388384d734af22d9edcefa5ca65f0539c\",\"filename\":\"pygoat/introduction/templates/Lab/SQL/sql.html\",\"status\":\"added\",\"additions\":45,\"deletions\":0,\"changes\":45,\"blob_url\":\"https://github.com/adeyosemanputra/pygoat/blob/3e140c898082fbbbf2869b104d700952b108d727/pygoat%2Fintroduction%2Ftemplates%2FLab%2FSQL%2Fsql.html\",\"raw_url\":\"https://github.com/adeyosemanputra/pygoat/raw/3e140c898082fbbbf2869b104d700952b108d727/pygoat%2Fintroduction%2Ftemplates%2FLab%2FSQL%2Fsql.html\",\"contents_url\":\"https://api.github.com/repos/adeyosemanputra/pygoat/contents/pygoat%2Fintroduction%2Ftemplates%2FLab%2FSQL%2Fsql.html?ref=3e140c898082fbbbf2869b104d700952b108d727\",\"patch\":\"@@
+        -0,0 +1,45 @@\\n+{% extends 'introduction/base.html' %}\\n+{% block content
+        %}\\n+{% block title %}\\n+<title>SQL Injection</title>\\n+{% endblock %}\\n+<div
+        class=\\\"content\\\">\\n+    <h3>Description</h3>\\n+    <div class=\\\"box\\\">\\n+\\n+
+        \       <h4>What is SQL Injection<h4>\\n+            <p class=\\\"bp\\\">
+        A SQL injection attack consists of insertion or \u201Cinjection\u201D of a
+        SQL query via the input data from the client to the application. A successful
+        SQL injection exploit can read sensitive data from the database, modify database
+        data (Insert/Update/Delete), execute administration operations on the database
+        (such as shutdown the DBMS), recover the content of a given file present on
+        the DBMS file system and in some cases issue commands to the operating system.
+        SQL injection attacks are a type of injection attack, in which SQL commands
+        are injected into data-plane input in order to affect the execution of predefined
+        SQL commands.\\n+\\n+</p>\\n+        <button class=\\\"coll btn btn-info\\\">Lab
+        Details</button>\\n+        <div class=\\\"lab\\\">\\n+              <p class=\\\"bp\\\">\\n+\\n+SQL
+        injection errors occur when:\\n+\\n+Data enters a program from an untrusted
+        source.\\n+The data used to dynamically construct a SQL query\\n+The main
+        consequences are:\\n+\\n+Confidentiality: Since SQL databases generally hold
+        sensitive data, loss of confidentiality is a frequent problem with SQL Injection
+        vulnerabilities.\\n+Authentication: If poor SQL commands are used to check
+        user names and passwords, it may be possible to connect to a system as another
+        user with no previous knowledge of the password.\\n+Authorization: If authorization
+        information is held in a SQL database, it may be possible to change this information
+        through the successful exploitation of a SQL Injection vulnerability.\\n+Integrity:
+        Just as it may be possible to read sensitive information, it is also possible
+        to make changes or even delete this information with a SQL Injection attack.\\n+</p>\\n+\\n+
+        \             <br>\\n+                  <div align=\\\"right\\\"> <button
+        class=\\\"btn btn-primary\\\" type=\\\"button\\\" onclick=\\\"window.location.href='/sql_lab'\\\">Access
+        Lab</button></div>\\n+\\n+              </p>\\n+        </div>\\n+        <h4>Mitigation<h4>\\n+
+        \            <p class=\\\"bp\\\">Content goes here !!!!</p>\\n+\\n+\\n+\\n+
+        \   </div>\\n+</div>\\n+\\n+\\n+\\n+{% endblock %}\\n\\\\ No newline at end
+        of file\"},{\"sha\":\"55db7e30883ca43fa424a7feae719b63630eda7a\",\"filename\":\"pygoat/introduction/templates/Lab/SQL/sql_lab.html\",\"status\":\"added\",\"additions\":36,\"deletions\":0,\"changes\":36,\"blob_url\":\"https://github.com/adeyosemanputra/pygoat/blob/3e140c898082fbbbf2869b104d700952b108d727/pygoat%2Fintroduction%2Ftemplates%2FLab%2FSQL%2Fsql_lab.html\",\"raw_url\":\"https://github.com/adeyosemanputra/pygoat/raw/3e140c898082fbbbf2869b104d700952b108d727/pygoat%2Fintroduction%2Ftemplates%2FLab%2FSQL%2Fsql_lab.html\",\"contents_url\":\"https://api.github.com/repos/adeyosemanputra/pygoat/contents/pygoat%2Fintroduction%2Ftemplates%2FLab%2FSQL%2Fsql_lab.html?ref=3e140c898082fbbbf2869b104d700952b108d727\",\"patch\":\"@@
+        -0,0 +1,36 @@\\n+{% extends \\\"introduction/base.html\\\" %}\\n+{% block
+        content %}\\n+{% block title %}\\n+<title>SQL LAB</title>\\n+{% endblock  %}\\n+\\n+<div
+        class=\\\"jumbotron\\\">\\n+    <h4 style=\\\"text-align:center\\\"> Can You
+        Log in as Admin</h4>\\n+    <div class=\\\"login\\\">\\n+        <form method=\\\"post\\\"
+        action=\\\"/sql_lab\\\">\\n+            {% csrf_token %}\\n+            <input
+        id=\\\"input\\\" type=\\\"text\\\" name=\\\"name\\\" placeholder=\\\"User
+        Name\\\"><br>\\n+            <input id=\\\"input\\\" type=\\\"password\\\"
+        name=\\\"pass\\\" placeholder=\\\"Password\\\"><br>\\n+            <button
+        \ style=\\\"margin-top:20px\\\" class=\\\"btn btn-primary\\\" type=\\\"submit\\\">
+        Log in</button>\\n+\\n+\\n+        </form>\\n+    </div>\\n+</div>\\n+\\n+<div
+        class=\\\"container\\\">\\n+    {% if user1 %}\\n+       <h4>Logged in as:
+        {{user1}}</h4>\\n+\\n+    {% elif wrongpass %}\\n+       <h4> The password
+        you have entered doesnt match the username!</h4>\\n+\\n+    {% elif  no %}\\n+
+        \      <h4>User Not Found </h4>\\n+    {% else %}\\n+\\n+    {% endif %}\\n+\\n+\\n+</div>\\n+{%
+        endblock %}\\n\\\\ No newline at end of file\"},{\"sha\":\"216f37e6824667cb28958509e867059933438acb\",\"filename\":\"pygoat/introduction/templates/Lab/XSS/xss.html\",\"status\":\"modified\",\"additions\":2,\"deletions\":2,\"changes\":4,\"blob_url\":\"https://github.com/adeyosemanputra/pygoat/blob/3e140c898082fbbbf2869b104d700952b108d727/pygoat%2Fintroduction%2Ftemplates%2FLab%2FXSS%2Fxss.html\",\"raw_url\":\"https://github.com/adeyosemanputra/pygoat/raw/3e140c898082fbbbf2869b104d700952b108d727/pygoat%2Fintroduction%2Ftemplates%2FLab%2FXSS%2Fxss.html\",\"contents_url\":\"https://api.github.com/repos/adeyosemanputra/pygoat/contents/pygoat%2Fintroduction%2Ftemplates%2FLab%2FXSS%2Fxss.html?ref=3e140c898082fbbbf2869b104d700952b108d727\",\"patch\":\"@@
+        -43,7 +43,7 @@ <h4>What is Cross Site Scripting or XSS?<h4>\\n \\n Exploiting
+        the Reflection of the search query\\n \\n-Now instead of giving a search term
+        try giving a script <code>< script>alert('xss')  < /script> </code> .\\n+
+        \               Now instead of giving a search term try giving a script &lt;script&gt;alert(1)&lt;/script&gt;\\n
+        </p>\\n \\n               <br>\\n@@ -59,7 +59,7 @@ <h4>Mitigation<h4>\\n     </div>\\n
+        </div>\\n \\n-<script>\\n+\\n \\n \\n {% endblock content %}\\n\\\\ No newline
+        at end of file\"},{\"sha\":\"064d95eb54e4d3badd055f02fea9726d04bd892a\",\"filename\":\"pygoat/introduction/templates/Lab/XSS/xss_lab.html\",\"status\":\"modified\",\"additions\":4,\"deletions\":1,\"changes\":5,\"blob_url\":\"https://github.com/adeyosemanputra/pygoat/blob/3e140c898082fbbbf2869b104d700952b108d727/pygoat%2Fintroduction%2Ftemplates%2FLab%2FXSS%2Fxss_lab.html\",\"raw_url\":\"https://github.com/adeyosemanputra/pygoat/raw/3e140c898082fbbbf2869b104d700952b108d727/pygoat%2Fintroduction%2Ftemplates%2FLab%2FXSS%2Fxss_lab.html\",\"contents_url\":\"https://api.github.com/repos/adeyosemanputra/pygoat/contents/pygoat%2Fintroduction%2Ftemplates%2FLab%2FXSS%2Fxss_lab.html?ref=3e140c898082fbbbf2869b104d700952b108d727\",\"patch\":\"@@
+        -23,10 +23,13 @@ <h2 align=\\\"center\\\">FAANG IT</h2>\\n     <h3>Company
+        Name :        <i>{{company}}</i></h3>\\n     <h3>Ceo Name     :          <i>{{ceo}}</i></h3>\\n
+        \    <h3>About        :        <i>{{about}}</i></h3>\\n-    {% else %}\\n+
+        \   {% elif query %}\\n     <h3> The company '{{query|safe}}' You searched
+        for is not Part of FAANG</h3>\\n+    {% else %}\\n+\\n     {% endif %}\\n
+        \\n+\\n </div>\\n \\n \"},{\"sha\":\"09ec9a0f63cf45816d687f3b5273b81b15a615dd\",\"filename\":\"pygoat/introduction/templates/introduction/base.html\",\"status\":\"modified\",\"additions\":1,\"deletions\":1,\"changes\":2,\"blob_url\":\"https://github.com/adeyosemanputra/pygoat/blob/3e140c898082fbbbf2869b104d700952b108d727/pygoat%2Fintroduction%2Ftemplates%2Fintroduction%2Fbase.html\",\"raw_url\":\"https://github.com/adeyosemanputra/pygoat/raw/3e140c898082fbbbf2869b104d700952b108d727/pygoat%2Fintroduction%2Ftemplates%2Fintroduction%2Fbase.html\",\"contents_url\":\"https://api.github.com/repos/adeyosemanputra/pygoat/contents/pygoat%2Fintroduction%2Ftemplates%2Fintroduction%2Fbase.html?ref=3e140c898082fbbbf2869b104d700952b108d727\",\"patch\":\"@@
+        -56,7 +56,7 @@ <h3>PyGoat</h3>\\n                         </a>\\n                         <ul
+        class=\\\"collapse list-unstyled\\\" id=\\\"sqlSubmenu\\\">\\n                             <li>\\n-
+        \                               <a href=\\\"#\\\">Page 1</a>\\n+                                <a
+        href=\\\"/sql\\\">SQl Injection </a>\\n                             </li>\\n
+        \                            <li>\\n                                 <a href=\\\"#\\\">Page
+        2</a>\"},{\"sha\":\"8e0039aefae0e6626634c64eafbba6d91fd1bd96\",\"filename\":\"pygoat/introduction/urls.py\",\"status\":\"modified\",\"additions\":4,\"deletions\":0,\"changes\":4,\"blob_url\":\"https://github.com/adeyosemanputra/pygoat/blob/3e140c898082fbbbf2869b104d700952b108d727/pygoat%2Fintroduction%2Furls.py\",\"raw_url\":\"https://github.com/adeyosemanputra/pygoat/raw/3e140c898082fbbbf2869b104d700952b108d727/pygoat%2Fintroduction%2Furls.py\",\"contents_url\":\"https://api.github.com/repos/adeyosemanputra/pygoat/contents/pygoat%2Fintroduction%2Furls.py?ref=3e140c898082fbbbf2869b104d700952b108d727\",\"patch\":\"@@
+        -7,4 +7,8 @@\\n     path('xss', views.xss,name=\\\"xss\\\"),\\n     path('xssL',views.xss_lab,name='xss_lab'),\\n
+        \    path('xssL1',views.xss_lab,name='xss_lab'),\\n+    path(\\\"sql\\\",views.sql,name='sql'),\\n+
+        \   path(\\\"sql_lab\\\",views.sql_lab,name=\\\"sql_lab\\\"),\\n+    path(\\\"sql_lab1\\\",views.sql_lab,name=\\\"sql_lab\\\")\\n+\\n
+        ]\\n\\\\ No newline at end of file\"},{\"sha\":\"bd795ad67986f113cb2d4f07550620d367233000\",\"filename\":\"pygoat/introduction/views.py\",\"status\":\"modified\",\"additions\":24,\"deletions\":1,\"changes\":25,\"blob_url\":\"https://github.com/adeyosemanputra/pygoat/blob/3e140c898082fbbbf2869b104d700952b108d727/pygoat%2Fintroduction%2Fviews.py\",\"raw_url\":\"https://github.com/adeyosemanputra/pygoat/raw/3e140c898082fbbbf2869b104d700952b108d727/pygoat%2Fintroduction%2Fviews.py\",\"contents_url\":\"https://api.github.com/repos/adeyosemanputra/pygoat/contents/pygoat%2Fintroduction%2Fviews.py?ref=3e140c898082fbbbf2869b104d700952b108d727\",\"patch\":\"@@
+        -1,6 +1,6 @@\\n from django.shortcuts import render\\n from django.http import
+        HttpResponse\\n-from .models import  FAANG,info\\n+from .models import  FAANG,info,login\\n
+        \\n def home(request):\\n     \\n@@ -15,6 +15,29 @@ def xss_lab(request):\\n
+        \        return render(request,'Lab/XSS/xss_lab.html',args)\\n     else:\\n
+        \        return render(request,'Lab/XSS/xss_lab.html', {'query': q})\\n+def
+        sql(request):\\n+    return  render(request,'Lab/SQL/sql.html')\\n+def sql_lab(request):\\n
+        \\n+    name=request.POST.get('name')\\n \\n+    password=request.POST.get('pass')\\n+\\n+
+        \   if name:\\n+\\n+        if login.objects.filter(user=name):\\n+\\n+\\n+\\n+
+        \           val=login.objects.raw(\\\"SELECT * FROM introduction_login WHERE
+        user='\\\"+name+\\\"'AND password='\\\"+password+\\\"'\\\")\\n+\\n+            if
+        val:\\n+                user=val[0].user;\\n+                return render(request,
+        'Lab/SQL/sql_lab.html',{\\\"user1\\\":user})\\n+            else:\\n+                return
+        render(request, 'Lab/SQL/sql_lab.html',{\\\"wrongpass\\\":password})\\n+        else:\\n+
+        \           return render(request, 'Lab/SQL/sql_lab.html',{\\\"no\\\": \\\"User
+        not found\\\"})\\n+    else:\\n+        return render(request, 'Lab/SQL/sql_lab.html')\\n
+        \"}]"
+    headers:
+      Accept-Ranges:
+      - bytes
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO,
+        X-GitHub-Request-Id, Deprecation, Sunset
+      Cache-Control:
+      - public, max-age=60, s-maxage=60
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - default-src 'none'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 29 Aug 2024 11:49:58 GMT
+      ETag:
+      - W/"3560e1e363606f5606daa935e52b6794837951d93910dd901c12de64df0a7419"
+      Last-Modified:
+      - Tue, 13 Aug 2024 05:43:14 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Server:
+      - github.com
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept,Accept-Encoding, Accept, X-Requested-With
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-GitHub-Request-Id:
+      - 33B6:3725DD:655616:6B82A3:66D06065
+      X-RateLimit-Limit:
+      - '60'
+      X-RateLimit-Remaining:
+      - '57'
+      X-RateLimit-Reset:
+      - '1724935795'
+      X-RateLimit-Resource:
+      - core
+      X-RateLimit-Used:
+      - '3'
+      X-XSS-Protection:
+      - '0'
+      x-github-api-version-selected:
+      - '2022-11-28'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - PyGithub/Python
+    method: GET
+    uri: https://api.github.com/repos/adeyosemanputra/pygoat/contents/pygoat/introduction/admin.py?ref=3e140c898082fbbbf2869b104d700952b108d727
+  response:
+    body:
+      string: '{"name":"admin.py","path":"pygoat/introduction/admin.py","sha":"00f3cac75d0e50f3fca4be96193061487206f73e","size":180,"url":"https://api.github.com/repos/adeyosemanputra/pygoat/contents/pygoat/introduction/admin.py?ref=3e140c898082fbbbf2869b104d700952b108d727","html_url":"https://github.com/adeyosemanputra/pygoat/blob/3e140c898082fbbbf2869b104d700952b108d727/pygoat/introduction/admin.py","git_url":"https://api.github.com/repos/adeyosemanputra/pygoat/git/blobs/00f3cac75d0e50f3fca4be96193061487206f73e","download_url":"https://raw.githubusercontent.com/adeyosemanputra/pygoat/3e140c898082fbbbf2869b104d700952b108d727/pygoat/introduction/admin.py","type":"file","content":"ZnJvbSBkamFuZ28uY29udHJpYiBpbXBvcnQgYWRtaW4KZnJvbSAubW9kZWxz\nIGltcG9ydCBGQUFORyxpbmZvLGxvZ2luCgojIFJlZ2lzdGVyIHlvdXIgbW9k\nZWxzIGhlcmUuCmFkbWluLnNpdGUucmVnaXN0ZXIoRkFBTkcpCmFkbWluLnNp\ndGUucmVnaXN0ZXIoaW5mbykKYWRtaW4uc2l0ZS5yZWdpc3Rlcihsb2dpbikK\n","encoding":"base64","_links":{"self":"https://api.github.com/repos/adeyosemanputra/pygoat/contents/pygoat/introduction/admin.py?ref=3e140c898082fbbbf2869b104d700952b108d727","git":"https://api.github.com/repos/adeyosemanputra/pygoat/git/blobs/00f3cac75d0e50f3fca4be96193061487206f73e","html":"https://github.com/adeyosemanputra/pygoat/blob/3e140c898082fbbbf2869b104d700952b108d727/pygoat/introduction/admin.py"}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO,
+        X-GitHub-Request-Id, Deprecation, Sunset
+      Cache-Control:
+      - public, max-age=60, s-maxage=60
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '514'
+      Content-Security-Policy:
+      - default-src 'none'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 29 Aug 2024 11:49:58 GMT
+      ETag:
+      - W/"00f3cac75d0e50f3fca4be96193061487206f73e"
+      Last-Modified:
+      - Thu, 15 Apr 2021 14:03:40 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Server:
+      - github.com
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      Vary:
+      - Accept,Accept-Encoding, Accept, X-Requested-With
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-GitHub-Request-Id:
+      - 1F14:3756B1:666D36:6C961D:66D06066
+      X-RateLimit-Limit:
+      - '60'
+      X-RateLimit-Remaining:
+      - '56'
+      X-RateLimit-Reset:
+      - '1724935795'
+      X-RateLimit-Resource:
+      - core
+      X-RateLimit-Used:
+      - '4'
+      X-XSS-Protection:
+      - '0'
+      x-github-api-version-selected:
+      - '2022-11-28'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - PyGithub/Python
+    method: GET
+    uri: https://api.github.com/repos/adeyosemanputra/pygoat/contents/pygoat/introduction/models.py?ref=3e140c898082fbbbf2869b104d700952b108d727
+  response:
+    body:
+      string: '{"name":"models.py","path":"pygoat/introduction/models.py","sha":"2105619fbe9048ad2ffd9012f4bff5b156771508","size":476,"url":"https://api.github.com/repos/adeyosemanputra/pygoat/contents/pygoat/introduction/models.py?ref=3e140c898082fbbbf2869b104d700952b108d727","html_url":"https://github.com/adeyosemanputra/pygoat/blob/3e140c898082fbbbf2869b104d700952b108d727/pygoat/introduction/models.py","git_url":"https://api.github.com/repos/adeyosemanputra/pygoat/git/blobs/2105619fbe9048ad2ffd9012f4bff5b156771508","download_url":"https://raw.githubusercontent.com/adeyosemanputra/pygoat/3e140c898082fbbbf2869b104d700952b108d727/pygoat/introduction/models.py","type":"file","content":"ZnJvbSBkamFuZ28uZGIgaW1wb3J0IG1vZGVscwoKIyBDcmVhdGUgeW91ciBt\nb2RlbHMgaGVyZS4KCmNsYXNzIEZBQU5HIChtb2RlbHMuTW9kZWwpOgogICAg\nY29tcGFueT1tb2RlbHMuQ2hhckZpZWxkKG1heF9sZW5ndGg9MjAwKTsKICAg\nIGRlZiBfX3N0cl9fKHNlbGYpOgogICAgICAgIHJldHVybiBzZWxmLmNvbXBh\nbnk7CgpjbGFzcyBpbmZvKG1vZGVscy5Nb2RlbCk6CiAgICBmYWFuZz1tb2Rl\nbHMuRm9yZWlnbktleSh0bz1GQUFORyxvbl9kZWxldGU9bW9kZWxzLkNBU0NB\nREUpCgogICAgY2VvPW1vZGVscy5DaGFyRmllbGQobWF4X2xlbmd0aD0yMDAp\nCiAgICBhYm91dD1tb2RlbHMuQ2hhckZpZWxkKG1heF9sZW5ndGg9MjAwKQoK\nY2xhc3MgbG9naW4obW9kZWxzLk1vZGVsKToKICAgIHVzZXI9bW9kZWxzLkNo\nYXJGaWVsZChtYXhfbGVuZ3RoPTIwMCkKICAgIHBhc3N3b3JkPW1vZGVscy5D\naGFyRmllbGQobWF4X2xlbmd0aD0zMDApCgo=\n","encoding":"base64","_links":{"self":"https://api.github.com/repos/adeyosemanputra/pygoat/contents/pygoat/introduction/models.py?ref=3e140c898082fbbbf2869b104d700952b108d727","git":"https://api.github.com/repos/adeyosemanputra/pygoat/git/blobs/2105619fbe9048ad2ffd9012f4bff5b156771508","html":"https://github.com/adeyosemanputra/pygoat/blob/3e140c898082fbbbf2869b104d700952b108d727/pygoat/introduction/models.py"}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO,
+        X-GitHub-Request-Id, Deprecation, Sunset
+      Cache-Control:
+      - public, max-age=60, s-maxage=60
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '746'
+      Content-Security-Policy:
+      - default-src 'none'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 29 Aug 2024 11:50:00 GMT
+      ETag:
+      - W/"2105619fbe9048ad2ffd9012f4bff5b156771508"
+      Last-Modified:
+      - Thu, 15 Apr 2021 14:03:40 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Server:
+      - github.com
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      Vary:
+      - Accept,Accept-Encoding, Accept, X-Requested-With
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-GitHub-Request-Id:
+      - 5EAA:373AAE:6885C7:6EB160:66D06068
+      X-RateLimit-Limit:
+      - '60'
+      X-RateLimit-Remaining:
+      - '55'
+      X-RateLimit-Reset:
+      - '1724935795'
+      X-RateLimit-Resource:
+      - core
+      X-RateLimit-Used:
+      - '5'
+      X-XSS-Protection:
+      - '0'
+      x-github-api-version-selected:
+      - '2022-11-28'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - PyGithub/Python
+    method: GET
+    uri: https://api.github.com/repos/adeyosemanputra/pygoat/contents/pygoat/introduction/static/Lab/xss.js?ref=3e140c898082fbbbf2869b104d700952b108d727
+  response:
+    body:
+      string: '{"name":"xss.js","path":"pygoat/introduction/static/Lab/xss.js","sha":"521e76ad7365b627b3344696a5d54c713927fe51","size":427,"url":"https://api.github.com/repos/adeyosemanputra/pygoat/contents/pygoat/introduction/static/Lab/xss.js?ref=3e140c898082fbbbf2869b104d700952b108d727","html_url":"https://github.com/adeyosemanputra/pygoat/blob/3e140c898082fbbbf2869b104d700952b108d727/pygoat/introduction/static/Lab/xss.js","git_url":"https://api.github.com/repos/adeyosemanputra/pygoat/git/blobs/521e76ad7365b627b3344696a5d54c713927fe51","download_url":"https://raw.githubusercontent.com/adeyosemanputra/pygoat/3e140c898082fbbbf2869b104d700952b108d727/pygoat/introduction/static/Lab/xss.js","type":"file","content":"dmFyIGNvbGwgPSBkb2N1bWVudC5nZXRFbGVtZW50c0J5Q2xhc3NOYW1lKCJj\nb2xsIik7CnZhciBpOwoKZm9yIChpID0gMDsgaSA8IGNvbGwubGVuZ3RoOyBp\nKyspIHsKICBjb2xsW2ldLmFkZEV2ZW50TGlzdGVuZXIoImNsaWNrIiwgZnVu\nY3Rpb24oKSB7CiAgICB0aGlzLmNsYXNzTGlzdC50b2dnbGUoImFjdGl2ZSIp\nOwogICAgdmFyIGNvbnRlbnQgPSB0aGlzLm5leHRFbGVtZW50U2libGluZzsK\nICAgIGlmIChjb250ZW50LnN0eWxlLmRpc3BsYXkgPT09ICJibG9jayIpIHsK\nICAgICAgY29udGVudC5zdHlsZS5kaXNwbGF5ID0gIm5vbmUiOwogICAgfSBl\nbHNlIHsKICAgICAgY29udGVudC5zdHlsZS5kaXNwbGF5ID0gImJsb2NrIjsK\nICAgIH0KICB9KTsKfQpwPWRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJ0IikK\ncC5pbm5lckhUTUw9ImFsZXJ0KDEpIg==\n","encoding":"base64","_links":{"self":"https://api.github.com/repos/adeyosemanputra/pygoat/contents/pygoat/introduction/static/Lab/xss.js?ref=3e140c898082fbbbf2869b104d700952b108d727","git":"https://api.github.com/repos/adeyosemanputra/pygoat/git/blobs/521e76ad7365b627b3344696a5d54c713927fe51","html":"https://github.com/adeyosemanputra/pygoat/blob/3e140c898082fbbbf2869b104d700952b108d727/pygoat/introduction/static/Lab/xss.js"}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO,
+        X-GitHub-Request-Id, Deprecation, Sunset
+      Cache-Control:
+      - public, max-age=60, s-maxage=60
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '736'
+      Content-Security-Policy:
+      - default-src 'none'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 29 Aug 2024 11:50:01 GMT
+      ETag:
+      - W/"521e76ad7365b627b3344696a5d54c713927fe51"
+      Last-Modified:
+      - Thu, 15 Apr 2021 14:03:40 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Server:
+      - github.com
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      Vary:
+      - Accept,Accept-Encoding, Accept, X-Requested-With
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-GitHub-Request-Id:
+      - 0EDD:1A7E17:661C0F:6C4A91:66D06069
+      X-RateLimit-Limit:
+      - '60'
+      X-RateLimit-Remaining:
+      - '54'
+      X-RateLimit-Reset:
+      - '1724935795'
+      X-RateLimit-Resource:
+      - core
+      X-RateLimit-Used:
+      - '6'
+      X-XSS-Protection:
+      - '0'
+      x-github-api-version-selected:
+      - '2022-11-28'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - PyGithub/Python
+    method: GET
+    uri: https://api.github.com/repos/adeyosemanputra/pygoat/contents/pygoat/introduction/urls.py?ref=3e140c898082fbbbf2869b104d700952b108d727
+  response:
+    body:
+      string: '{"name":"urls.py","path":"pygoat/introduction/urls.py","sha":"8e0039aefae0e6626634c64eafbba6d91fd1bd96","size":383,"url":"https://api.github.com/repos/adeyosemanputra/pygoat/contents/pygoat/introduction/urls.py?ref=3e140c898082fbbbf2869b104d700952b108d727","html_url":"https://github.com/adeyosemanputra/pygoat/blob/3e140c898082fbbbf2869b104d700952b108d727/pygoat/introduction/urls.py","git_url":"https://api.github.com/repos/adeyosemanputra/pygoat/git/blobs/8e0039aefae0e6626634c64eafbba6d91fd1bd96","download_url":"https://raw.githubusercontent.com/adeyosemanputra/pygoat/3e140c898082fbbbf2869b104d700952b108d727/pygoat/introduction/urls.py","type":"file","content":"ZnJvbSBkamFuZ28udXJscyBpbXBvcnQgcGF0aAoKZnJvbSAuaW1wb3J0IHZp\nZXdzCgp1cmxwYXR0ZXJucyA9IFsKICAgIHBhdGgoJycsIHZpZXdzLmhvbWUs\nIG5hbWU9J2hvbWVwYWdlJyksCiAgICBwYXRoKCd4c3MnLCB2aWV3cy54c3Ms\nbmFtZT0ieHNzIiksCiAgICBwYXRoKCd4c3NMJyx2aWV3cy54c3NfbGFiLG5h\nbWU9J3hzc19sYWInKSwKICAgIHBhdGgoJ3hzc0wxJyx2aWV3cy54c3NfbGFi\nLG5hbWU9J3hzc19sYWInKSwKICAgIHBhdGgoInNxbCIsdmlld3Muc3FsLG5h\nbWU9J3NxbCcpLAogICAgcGF0aCgic3FsX2xhYiIsdmlld3Muc3FsX2xhYixu\nYW1lPSJzcWxfbGFiIiksCiAgICBwYXRoKCJzcWxfbGFiMSIsdmlld3Muc3Fs\nX2xhYixuYW1lPSJzcWxfbGFiIikKCl0=\n","encoding":"base64","_links":{"self":"https://api.github.com/repos/adeyosemanputra/pygoat/contents/pygoat/introduction/urls.py?ref=3e140c898082fbbbf2869b104d700952b108d727","git":"https://api.github.com/repos/adeyosemanputra/pygoat/git/blobs/8e0039aefae0e6626634c64eafbba6d91fd1bd96","html":"https://github.com/adeyosemanputra/pygoat/blob/3e140c898082fbbbf2869b104d700952b108d727/pygoat/introduction/urls.py"}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO,
+        X-GitHub-Request-Id, Deprecation, Sunset
+      Cache-Control:
+      - public, max-age=60, s-maxage=60
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '611'
+      Content-Security-Policy:
+      - default-src 'none'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 29 Aug 2024 11:50:01 GMT
+      ETag:
+      - W/"8e0039aefae0e6626634c64eafbba6d91fd1bd96"
+      Last-Modified:
+      - Thu, 15 Apr 2021 14:03:40 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Server:
+      - github.com
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      Vary:
+      - Accept,Accept-Encoding, Accept, X-Requested-With
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-GitHub-Request-Id:
+      - 74BB:201599:1A6B32:1B6227:66D06069
+      X-RateLimit-Limit:
+      - '60'
+      X-RateLimit-Remaining:
+      - '53'
+      X-RateLimit-Reset:
+      - '1724935795'
+      X-RateLimit-Resource:
+      - core
+      X-RateLimit-Used:
+      - '7'
+      X-XSS-Protection:
+      - '0'
+      x-github-api-version-selected:
+      - '2022-11-28'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - PyGithub/Python
+    method: GET
+    uri: https://api.github.com/repos/adeyosemanputra/pygoat/contents/pygoat/introduction/views.py?ref=3e140c898082fbbbf2869b104d700952b108d727
+  response:
+    body:
+      string: '{"name":"views.py","path":"pygoat/introduction/views.py","sha":"bd795ad67986f113cb2d4f07550620d367233000","size":1341,"url":"https://api.github.com/repos/adeyosemanputra/pygoat/contents/pygoat/introduction/views.py?ref=3e140c898082fbbbf2869b104d700952b108d727","html_url":"https://github.com/adeyosemanputra/pygoat/blob/3e140c898082fbbbf2869b104d700952b108d727/pygoat/introduction/views.py","git_url":"https://api.github.com/repos/adeyosemanputra/pygoat/git/blobs/bd795ad67986f113cb2d4f07550620d367233000","download_url":"https://raw.githubusercontent.com/adeyosemanputra/pygoat/3e140c898082fbbbf2869b104d700952b108d727/pygoat/introduction/views.py","type":"file","content":"ZnJvbSBkamFuZ28uc2hvcnRjdXRzIGltcG9ydCByZW5kZXIKZnJvbSBkamFu\nZ28uaHR0cCBpbXBvcnQgSHR0cFJlc3BvbnNlCmZyb20gLm1vZGVscyBpbXBv\ncnQgIEZBQU5HLGluZm8sbG9naW4KCmRlZiBob21lKHJlcXVlc3QpOgogICAg\nCiAgICByZXR1cm4gcmVuZGVyKHJlcXVlc3QsJ2ludHJvZHVjdGlvbi9ob21l\nLmh0bWwnKQpkZWYgeHNzKHJlcXVlc3QpOgogICAgcmV0dXJuIHJlbmRlcihy\nZXF1ZXN0LCJMYWIvWFNTL3hzcy5odG1sIikKZGVmIHhzc19sYWIocmVxdWVz\ndCk6CiAgICBxPXJlcXVlc3QuR0VULmdldCgncScsJycpOwogICAgZj1GQUFO\nRy5vYmplY3RzLmZpbHRlcihjb21wYW55PXEpCiAgICBpZiBmOgogICAgICAg\nIGFyZ3M9eyJjb21wYW55IjpmWzBdLmNvbXBhbnksImNlbyI6ZlswXS5pbmZv\nX3NldC5hbGwoKVswXS5jZW8sImFib3V0IjpmWzBdLmluZm9fc2V0LmFsbCgp\nWzBdLmFib3V0fQogICAgICAgIHJldHVybiByZW5kZXIocmVxdWVzdCwnTGFi\nL1hTUy94c3NfbGFiLmh0bWwnLGFyZ3MpCiAgICBlbHNlOgogICAgICAgIHJl\ndHVybiByZW5kZXIocmVxdWVzdCwnTGFiL1hTUy94c3NfbGFiLmh0bWwnLCB7\nJ3F1ZXJ5JzogcX0pCmRlZiBzcWwocmVxdWVzdCk6CiAgICByZXR1cm4gIHJl\nbmRlcihyZXF1ZXN0LCdMYWIvU1FML3NxbC5odG1sJykKZGVmIHNxbF9sYWIo\ncmVxdWVzdCk6CgogICAgbmFtZT1yZXF1ZXN0LlBPU1QuZ2V0KCduYW1lJykK\nCiAgICBwYXNzd29yZD1yZXF1ZXN0LlBPU1QuZ2V0KCdwYXNzJykKCiAgICBp\nZiBuYW1lOgoKICAgICAgICBpZiBsb2dpbi5vYmplY3RzLmZpbHRlcih1c2Vy\nPW5hbWUpOgoKCgogICAgICAgICAgICB2YWw9bG9naW4ub2JqZWN0cy5yYXco\nIlNFTEVDVCAqIEZST00gaW50cm9kdWN0aW9uX2xvZ2luIFdIRVJFIHVzZXI9\nJyIrbmFtZSsiJ0FORCBwYXNzd29yZD0nIitwYXNzd29yZCsiJyIpCgogICAg\nICAgICAgICBpZiB2YWw6CiAgICAgICAgICAgICAgICB1c2VyPXZhbFswXS51\nc2VyOwogICAgICAgICAgICAgICAgcmV0dXJuIHJlbmRlcihyZXF1ZXN0LCAn\nTGFiL1NRTC9zcWxfbGFiLmh0bWwnLHsidXNlcjEiOnVzZXJ9KQogICAgICAg\nICAgICBlbHNlOgogICAgICAgICAgICAgICAgcmV0dXJuIHJlbmRlcihyZXF1\nZXN0LCAnTGFiL1NRTC9zcWxfbGFiLmh0bWwnLHsid3JvbmdwYXNzIjpwYXNz\nd29yZH0pCiAgICAgICAgZWxzZToKICAgICAgICAgICAgcmV0dXJuIHJlbmRl\ncihyZXF1ZXN0LCAnTGFiL1NRTC9zcWxfbGFiLmh0bWwnLHsibm8iOiAiVXNl\nciBub3QgZm91bmQifSkKICAgIGVsc2U6CiAgICAgICAgcmV0dXJuIHJlbmRl\ncihyZXF1ZXN0LCAnTGFiL1NRTC9zcWxfbGFiLmh0bWwnKQoK\n","encoding":"base64","_links":{"self":"https://api.github.com/repos/adeyosemanputra/pygoat/contents/pygoat/introduction/views.py?ref=3e140c898082fbbbf2869b104d700952b108d727","git":"https://api.github.com/repos/adeyosemanputra/pygoat/git/blobs/bd795ad67986f113cb2d4f07550620d367233000","html":"https://github.com/adeyosemanputra/pygoat/blob/3e140c898082fbbbf2869b104d700952b108d727/pygoat/introduction/views.py"}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO,
+        X-GitHub-Request-Id, Deprecation, Sunset
+      Cache-Control:
+      - public, max-age=60, s-maxage=60
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '1245'
+      Content-Security-Policy:
+      - default-src 'none'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 29 Aug 2024 11:50:02 GMT
+      ETag:
+      - W/"bd795ad67986f113cb2d4f07550620d367233000"
+      Last-Modified:
+      - Thu, 15 Apr 2021 14:03:40 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Server:
+      - github.com
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      Vary:
+      - Accept,Accept-Encoding, Accept, X-Requested-With
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-GitHub-Request-Id:
+      - 41CD:1A5AA8:71F3AA:781C83:66D0606A
+      X-RateLimit-Limit:
+      - '60'
+      X-RateLimit-Remaining:
+      - '52'
+      X-RateLimit-Reset:
+      - '1724935795'
+      X-RateLimit-Resource:
+      - core
+      X-RateLimit-Used:
+      - '8'
+      X-XSS-Protection:
+      - '0'
+      x-github-api-version-selected:
+      - '2022-11-28'
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,11 @@
+[static_analyzer]
+supported_languages="py,js,ts"
+host_workspace_dir="workspace"
+runtime_workspace_dir="workspace"
+runtime_application_dir="application"
+
+[language.py]
+supported_tools="bandit,semgrep"
+
+[language.js]
+supported_tools="eslint"
