@@ -10,8 +10,8 @@ from api.tests import test_vcr
 class TestGithubReview(unittest.TestCase):
 
     def test_github_review(self):
-        repo = GithubRepo(name='pygoat', owner='adeyosemanputra')
         config = AppConfig.get_config()
+        repo = GithubRepo(name='pygoat', owner='adeyosemanputra')
         with test_vcr.use_cassette('github_pull_request.yaml'):
             pr = GithubService(config).get_pull_request(repo, 11)
         StaticAnalyzer(config).static_review(pr)
