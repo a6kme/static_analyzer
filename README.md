@@ -5,9 +5,10 @@
 
 ### How to run
 1. Clone the repo `git clone https://github.com/a6kme/static_analyzer`
-1. Pull the docker image `docker pull a6kme/static-analyzer-py`
+1. Pull the docker images `docker pull a6kme/static-analyzer-py` and `docker pull a6kme/static-analyzer-js`
 1. Install the dependencies `pip install -r api/requirements.txt`
 1. Run the analyzer
+
 ```
 from api.src.analyzer import StaticAnalyzer
 from api.src.config import AppConfig
@@ -22,7 +23,10 @@ for file in pr.files:
     print(file.review)
 ```
 
+### Run tests
+1. `python -m pytest`
+
 ### RoadMap
-1. Add other languages
-    - Start with JavaScript
-1. Publish as a python library (If required)
+- [ ] Add LLM Layer to recommend the reviews
+- [ ] Add evaluation dataset and run evaluations
+- [ ] Figure out whether pulling the base commit makes any difference in analysis vs just writing the hunks
