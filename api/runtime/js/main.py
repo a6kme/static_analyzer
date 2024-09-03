@@ -5,7 +5,6 @@ import argparse
 import json
 
 from api.runtime.common.semgrep import SemgrepService
-from api.runtime.py.bandit import BanditService
 from api.src.logger import logger
 
 
@@ -24,11 +23,12 @@ def get_parser() -> argparse.ArgumentParser:
 
 def get_tool(tool):
     if tool == 'semgrep':
+        # ToDo: check package.json for frameworks like react / vue / angular and
+        # add the appropriate rulesets
+
         return SemgrepService(
-            workspace_dir='/workspace', rulesets=['p/security-audit', 'p/python']
+            workspace_dir='/workspace', rulesets=['p/security-audit', 'p/javascript', 'p/typescript']
         )
-    elif tool == 'bandit':
-        return BanditService(workspace_dir='/workspace')
 
 
 def run(args):

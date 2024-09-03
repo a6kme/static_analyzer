@@ -4,15 +4,22 @@ import subprocess
 
 
 class SemgrepService:
-    def __init__(self, workspace_dir) -> None:
+    def __init__(self, workspace_dir, rulesets=['p/security-audit']) -> None:
         self.workspace_dir = workspace_dir
+        self.rulesets = rulesets
 
     def analyze(self):
+        # generate configuration for rulesets
+        ruleset_config = []
+        for ruleset in self.rulesets:
+            ruleset_config.append('--config')
+            ruleset_config.append(ruleset)
+
         # run semgrep analysis on the file using shell
+
         try:
             result = subprocess.run(
-                ["semgrep", "--json", "--config",
-                    "p/security-audit",  self.workspace_dir],
+                ["semgrep", "--json"] + ruleset_config + [self.workspace_dir],
                 stdout=subprocess.PIPE,
                 stderr=subprocess.PIPE,
                 text=True

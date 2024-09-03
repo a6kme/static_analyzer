@@ -8,4 +8,4 @@ runtime_application_dir="application"
 supported_tools="bandit,semgrep"
 
 [language.js]
-supported_tools="eslint"
+supported_tools="semgrep"

@@ -38,6 +38,9 @@ class StaticAnalyzer:
             if self._is_language_in_workspace(language):
                 self._analyze_workspace_for_language(language)
 
+        # Dedupe the results from the runtime
+        self._dedupe_runtime_results()
+
         # Parse the results from the runtime exported in workspace directory and
         # populate the PR files with reviews
         self._parse_runtime_results(pr)
@@ -46,8 +49,8 @@ class StaticAnalyzer:
         # Run the static analysis tool for the language
         if language == Language.PYTHON.value:
             self._run_python_static_analysis()
-
-        # ToDo: Support more languages
+        elif language in (Language.JAVASCRIPT.value, Language.TYPESCRIPT.value):
+            self._run_js_static_analysis()
 
     def _run_python_static_analysis(self):
         # Run a container with the directory mounted
@@ -55,6 +58,15 @@ class StaticAnalyzer:
         image_name = 'a6kme/static-analyzer-py'
         command = f'python {self.config.runtime_application_dir}/api/runtime/py/main.py' + ' ' + \
             f'-t {self.config.language[Language.PYTHON.value]["supported_tools"]}'
+
+        self._start_runtime(image_name, command)
+
+    def _run_js_static_analysis(self):
+        # Run a container with the directory mounted
+        # if javascript or typescript:
+        image_name = 'a6kme/static-analyzer-js'
+        command = f'python {self.config.runtime_application_dir}/api/runtime/js/main.py' + ' ' + \
+            f'-t {self.config.language[Language.JAVASCRIPT.value]["supported_tools"]}'
 
         self._start_runtime(image_name, command)
 
@@ -108,6 +120,18 @@ class StaticAnalyzer:
                     severity=review['severity'],
                     confidence=review['confidence']
                 ))
+
+    def _dedupe_runtime_results(self):
+        # ToDo: Figure out a more efficient way to do this
+        unique_results = []
+        with open(f'{self.config.host_workspace_dir}/results.jsonl', 'r') as f:
+            for review in f:
+                if review not in unique_results:
+                    unique_results.append(review)
+
+        with open(f'{self.config.host_workspace_dir}/results.jsonl', 'w') as f:
+            for review in unique_results:
+                f.write(review)
 
     def _write_file_blobs_to_workspace(self, pr: PullRequest):
         workspace_dir = self.config.host_workspace_dir

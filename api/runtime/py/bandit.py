@@ -10,7 +10,7 @@ class BanditService:
     def __init__(self, workspace_dir) -> None:
         self.workspace_dir = workspace_dir
 
-    def analyze(self):
+    def analyze(self, *args, **kwargs):
         # run bandit analysis on the file using shell
         try:
             files = os.listdir(self.workspace_dir)
