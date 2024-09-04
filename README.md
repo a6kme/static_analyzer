@@ -1,4 +1,4 @@
-## one static Analyzer to rule them all
+## One SAST (Static Application Security Testing) to rule them all
 ### System requirements
 1. Docker runtime
 1. python3
