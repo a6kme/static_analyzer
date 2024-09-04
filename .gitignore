@@ -5,3 +5,4 @@ workspace/
 logs/
 experiments.ipynb
 .env
+trajectories/

@@ -33,7 +33,7 @@ def create_dataset():
     ]
 
     config = AppConfig.get_config()
-    dataset_file = open('api/evaluate/dataset.json', 'w')
+    dataset_file = open('api/evaluate/dataset.jsonl', 'w')
     logger.info(f"Generating dataset for {len(data)} PRs")
     for entry in tqdm.tqdm(data):
         logger.debug(
@@ -45,13 +45,15 @@ def create_dataset():
             file = next((f for f in pr.files if f.filename == file_name), None)
             reviews = file.reviews
             dataset_file.write(json.dumps({
+                'id': f"{entry['repo_owner']}_{entry['repo_name']}_{entry['pr_number']}_{file_name}",
                 'code': file.blob,
                 'reviews': model_dump(
                     reviews,
                     include=['issue_text', 'line_number',
                              'cwe', 'severity', 'confidence']
-                )
-            }))
+                ),
+                'language': file.language
+            }) + '\n')
     dataset_file.flush()
     dataset_file.close()
 

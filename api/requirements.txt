@@ -5,3 +5,5 @@ toml==0.10.2
 tqdm==4.66.5
 python-dotenv==1.0.1
 litellm==1.44.15
+tenacity==9.0.0
+langchain==0.2.16

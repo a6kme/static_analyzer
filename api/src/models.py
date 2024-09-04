@@ -24,6 +24,7 @@ class File(BaseModel):
     filename: str
     blob: str  # Contents of the file after applying commits in the PR
     patch: str  # Diff of the file after applying commits in the PR
+    language: str
     reviews: List[Review] = []
 
 
@@ -56,4 +57,4 @@ class Language(Enum):
 
 class Models(Enum):
     GPT4o = 'gpt-4o'
-    Sonnet3_5 = 'sonnet-3.5'
+    Sonnet3_5 = 'claude-3-5-sonnet-20240620'

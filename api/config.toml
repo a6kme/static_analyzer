@@ -10,5 +10,5 @@ supported_tools="bandit,semgrep"
 [language.js]
 supported_tools="semgrep"
 
-[evaluate.models]
-models="gpt-4o,claude-3.5"
+[evaluate]
+models="gpt-4o,claude-3-5-sonnet-20240620"

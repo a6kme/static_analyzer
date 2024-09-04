@@ -41,5 +41,16 @@ class GithubService:
             filename=file_changed.filename,
             blob=file_content,
             patch=file_changed.patch,
+            language=self._get_language(file_changed.filename)
         )
         pr.files.append(file)
+
+    def _get_language(self, filename: str) -> str:
+        if filename.endswith('.py'):
+            return 'python'
+        elif filename.endswith('.js'):
+            return 'javascript'
+        elif filename.endswith('.ts'):
+            return 'typescript'
+        else:
+            raise ValueError(f"Unsupported language for file: {filename}")
