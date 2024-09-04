@@ -53,6 +53,28 @@
             "type": "debugpy",
             "request": "launch",
             "module": "pytest"
+        },
+        {
+            "name": "Create Dataset",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/api/evaluate/create_dataset.py",
+            "envFile": "${workspaceFolder}/.env",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            },
+            "justMyCode": false
+        },
+        {
+            "name": "Evaluate",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/api/evaluate/main.py",
+            "envFile": "${workspaceFolder}/.env",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            },
+            "justMyCode": false
         }
     ]
 }

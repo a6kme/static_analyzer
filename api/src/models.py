@@ -1,5 +1,5 @@
 from enum import Enum
-from typing import ForwardRef, List
+from typing import Any, ForwardRef, List, Literal
 
 from pydantic import BaseModel
 
@@ -45,9 +45,15 @@ class Config(BaseModel):
     runtime_workspace_dir: str
     runtime_application_dir: str
     language: dict = {}
+    evaluate: dict = {}
 
 
 class Language(Enum):
     PYTHON = 'py'
     JAVASCRIPT = 'js'
     TYPESCRIPT = 'ts'
+
+
+class Models(Enum):
+    GPT4o = 'gpt-4o'
+    Sonnet3_5 = 'sonnet-3.5'

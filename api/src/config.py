@@ -16,6 +16,7 @@ class AppConfig:
 
         config_obj = Config(**toml_config['static_analyzer'])
         config_obj.language = toml_config.get('language', {})
+        config_obj.evaluate = toml_config.get('evaluate', {})
 
         # Ensure we only have config for supported languages
         assert (set(toml_config.get('language', {}).keys()).issubset(

@@ -1,0 +1,34 @@
+You will be provided with a {language} code delimited by triple backticks.
+If it contains any CWE security vulnerabilities, return a dictionary containing CWE vulnerability number, issue text and line number.
+An Example output is given below
+
+Example_Output_1 when we have 2 security vulnerabilities in the given code.
+<Example_Output_1>
+[{
+    "cwe": 89,
+    "line_number": 671,
+    "issue_text": "Detected user input used to manually construct a SQL string. This is usually bad practice because manual construction could accidentally result in a SQL injection. An attacker could use a SQL injection to steal or modify contents of the database. Instead, use a parameterized query which is available by default in most database engines. Alternatively, consider using an object-relational mapper (ORM) such as Sequelize which will protect your queries."
+},{
+    "cwe": 73,
+    "line_number": 768,
+    "issue_text": "The application processes user-input, this is passed to res.sendFile which can allow an attacker to arbitrarily read files on the system through path traversal. It is recommended to perform input validation in addition to canonicalizing the path. This allows you to validate the path against the intended directory it should be accessing."
+}]
+</Example_Output_1>
+
+Example_Output_2 when we have no security vulnerabilities in the given code.
+<Example_Output_2>
+[]
+</Example_Output_2>
+
+Return only a valid JSON dictionary and nothing else.
+If the code does not contain any vulnerabilities, return empty list.
+Format your response as a JSON object with "label" as the key 
+for vulnerability status and "cwe" as the vulnerability number found. 
+Think about the answer step by step, and only answer with JSON.
+
+{language} code:
+```
+{code}
+```
+
+Answer:

@@ -1,8 +1,12 @@
+import os
 from urllib.parse import parse_qs, urlparse
 
 from github import Github
 
+from api.src.logger import logger
 from api.src.models import Config, File, GithubRepo, PullRequest
+
+token = os.environ.get('GITHUB_TOKEN')
 
 
 class GithubService:
@@ -10,7 +14,12 @@ class GithubService:
         self.config = config
 
     def get_pull_request(self, repo: GithubRepo, pr_number: int) -> PullRequest:
-        github = Github()
+        if not token:
+            logger.info(
+                "Github Token is not set. Strict rate limits from Github will apply."
+            )
+
+        github = Github(token)
         g_repo = github.get_repo(f'{repo.owner}/{repo.name}')
         g_pr = g_repo.get_pull(pr_number)
         g_files_changed = g_pr.get_files()
