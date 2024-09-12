@@ -14,6 +14,10 @@ class AppConfig:
         except (FileNotFoundError, toml.TomlDecodeError) as e:
             raise RuntimeError('Invalid or Missing configuration file')
 
+        # convert supported languages to list which Config expects
+        toml_config['static_analyzer']['supported_languages'] = \
+            toml_config['static_analyzer']['supported_languages'].split(',')
+
         config_obj = Config(**toml_config['static_analyzer'])
 
         config_obj.language = cls._parse_language(

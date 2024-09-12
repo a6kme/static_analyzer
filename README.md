@@ -13,7 +13,7 @@
 from api.src.analyzer import StaticAnalyzer
 from api.src.config import AppConfig
 from api.src.models import GithubRepo
-from api.src.services import GithubService
+from api.src.services.github import GithubService
 
 config = AppConfig.get_config()
 repo = GithubRepo(name='pygoat', owner='adeyosemanputra')

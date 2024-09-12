@@ -1,7 +1,7 @@
 from enum import Enum
-from typing import Any, ForwardRef, List, Literal
+from typing import List
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class GithubRepo(BaseModel):
@@ -30,6 +30,10 @@ class File(BaseModel):
 
 class PullRequest(BaseModel):
     files: List[File] = []
+    base: str | None = Field(description="Base sha of the PR", default=None)
+    diff: str | None = Field(description="Diff of the PR", default=None)
+    repo: GithubRepo | None = Field(
+        description="Repository of the PR", default=None)
 
 
 class LanguageConfig(BaseModel):
@@ -41,7 +45,7 @@ class PythonConfig(LanguageConfig):
 
 
 class Config(BaseModel):
-    supported_languages: str
+    supported_languages: list
     host_workspace_dir: str
     runtime_workspace_dir: str
     runtime_application_dir: str

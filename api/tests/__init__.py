@@ -6,4 +6,5 @@ test_vcr = vcr.VCR(
     record_mode='once',  # 'once' records the interactions and uses them if present
     # Criteria for matching requests to recorded interactions
     match_on=['uri', 'method'],
+    filter_headers=['authorization'],  # Filter out sensitive data
 )
