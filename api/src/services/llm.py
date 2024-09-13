@@ -8,7 +8,6 @@ from tenacity import (before_sleep_log, retry, retry_if_exception_type,
                       stop_after_attempt, wait_exponential)
 
 from api.src.logger import DEBUG, logger
-from api.src.models import Models
 
 
 class LLMService:
@@ -24,12 +23,12 @@ class LLMService:
         retry=retry_if_exception_type(InternalServerError),
         before_sleep=before_sleep_log(logger, logging.DEBUG)
     )
-    def completion(self, model: Models, messages, temperature: float = 0.0):
+    def completion(self, model: str, messages, temperature: float = 0.0):
         """
             Get the completion from the model
         """
         response = completion(
-            model=model.value,
+            model=model,
             messages=messages,
             temperature=temperature
         )
@@ -40,7 +39,7 @@ class LLMService:
                 traj_file_obj.write(json.dumps({
                     'messages': messages,
                     'response': response_content,
-                    'model': model.value,
+                    'model': model,
                     'cost': completion_cost(response),
                     'usage': {
                         'prompt_tokens': response.usage.prompt_tokens,

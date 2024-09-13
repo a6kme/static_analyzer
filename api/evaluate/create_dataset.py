@@ -52,8 +52,11 @@ class GenerateDataset:
         logger.info(f"Generating dataset for {len(self.pr_ids)} PRs")
 
         for pr_id in tqdm.tqdm(self.pr_ids):
-            # Also check if the PR is already present in the dataset
-            # if yes, skip it
+            # Skip the blacklisted PRs and the PRs that are already in the dataset
+            if self._is_pr_blacklisted(pr_id) or self._is_pr_in_dataset(pr_id):
+                logger.debug(
+                    f"Skipping PR ID: {self.repo.owner}_{self.repo.name}_{pr_id} since either blacklisted or already in dataset")
+                continue
 
             pr_reviews = []
             logger.debug(
@@ -76,14 +79,36 @@ class GenerateDataset:
                     })
 
             # Write the reviews to the dataset file
-            if pr_reviews:
-                dataset_file.write(json.dumps({
-                    'id': f"{self.repo.owner}_{self.repo.name}_{pr_id}",
-                    'reviews': pr_reviews
-                }) + '\n')
+            # FIXME: Not a good idea to rely on the id to extract the repo information and
+            # PR number, since the repo name can contain underscores
 
-        dataset_file.flush()
+            # TODO: Think about how the code can be structured so that code chunks to get the PR,
+            # semantic understanding of data rows and writing to the dataset file can be reused
+            dataset_file.write(json.dumps({
+                'id': f"{self.repo.owner}_{self.repo.name}_{pr_id}",
+                'reviews': pr_reviews
+            }) + '\n')
+            dataset_file.flush()
+
         dataset_file.close()
+
+    def _is_pr_blacklisted(self, pr_id):
+        # These PRs are being used as examples in prompts, so we don't want to include them in the dataset
+        blacklisted_prs = [
+            'adeyosemanputra_pygoat_15',
+            'juice-shop_juice-shop_64'
+        ]
+        return f"{self.repo.owner}_{self.repo.name}_{pr_id}" in blacklisted_prs
+
+    def _is_pr_in_dataset(self, pr_id):
+        # Check if the PR is already in the dataset
+        # TODO: This can be optimized by caching the dataset in memory
+        with open(self.dataset_file_path, 'r') as dataset_file:
+            for line in dataset_file:
+                dataset_pr = json.loads(line)
+                if dataset_pr['id'] == f"{self.repo.owner}_{self.repo.name}_{pr_id}":
+                    return True
+        return False
 
 
 def create_dataset():
@@ -93,7 +118,7 @@ def create_dataset():
         GithubRepo(name='juice-shop', owner='juice-shop')
     ]
     for repo in repos:
-        GenerateDataset(repo, max_pr=20, dataset_append_only=True).generate()
+        GenerateDataset(repo, max_pr=50, dataset_append_only=True).generate()
 
 
 if __name__ == '__main__':

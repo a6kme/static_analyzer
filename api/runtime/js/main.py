@@ -23,7 +23,7 @@ def get_parser() -> argparse.ArgumentParser:
 
 def get_tool(tool):
     if tool == 'semgrep':
-        # ToDo: check package.json for frameworks like react / vue / angular and
+        # TODO: check package.json for frameworks like react / vue / angular and
         # add the appropriate rulesets
 
         return SemgrepService(

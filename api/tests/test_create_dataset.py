@@ -15,7 +15,7 @@ class TestDatasetCreation(unittest.TestCase):
         repo = GithubRepo(name='juice-shop', owner='juice-shop')
         pr_ids = [40]
 
-        # ToDo: Unable to use VCR with current design. docker.get_client() does not work with VCR
+        # TODO: Unable to use VCR with current design. docker.get_client() does not work with VCR
         # Think about how the code can be refactored to make it testable [ It feels like GenerateDataset.generate
         # is doing too much and should be broken down into smaller functions ]
         # with test_vcr.use_cassette('github_create_dataset.yaml'):

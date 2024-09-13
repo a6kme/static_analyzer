@@ -146,13 +146,21 @@ class StaticAnalyzerService:
                 ))
 
     def _dedupe_runtime_results(self):
-        # ToDo: Figure out a more efficient way to do this
+        # TODO: Figure out better complexity than O(n^2)
         unique_results = []
+        unique_result_keys = set()
         with open(f'{self.config.host_workspace_dir}/results.jsonl', 'r') as f:
             for review in f:
-                if review not in unique_results:
-                    unique_results.append(review)
+                review_dict = json.loads(review)
 
+                # Dedupe the results based on the file, line number and CWE since
+                # different issue text can be generated for same CWE by different analysis tools or rulesets
+                unique_key = f"{review_dict['file']}_{review_dict['line']}_{review_dict['cwe']}"
+                if unique_key not in unique_result_keys:
+                    unique_results.append(review)
+                    unique_result_keys.add(unique_key)
+
+        # override the results file with the deduped results
         with open(f'{self.config.host_workspace_dir}/results.jsonl', 'w') as f:
             for review in unique_results:
                 f.write(review)

@@ -1,1 +1,1 @@
-# ToDo: Once figure out how to generate eslint config file, add the EslintService here
+# TODO: Once figure out how to generate eslint config file, add the EslintService here

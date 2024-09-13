@@ -1,0 +1,273 @@
+You will be provided with a file patch of a github pull request. You are requested to identify CWE vulnerabilities in the given patch file.
+Below are some examples to illustrate the task.
+
+<example_1>
+```patch
+@@ -115,3 +115,29 @@ def xxe_parse(request):
+     p=comments.objects.filter(id=1).update(comment=text);
+ 
+     return render(request, 'Lab/XXE/xxe_lab.html')
++
++
++
++#***************************************************************Broken Access Control************************************************************#
++@csrf_exempt
++def ba(request):
++    return render(request,"Lab/BrokenAccess/ba.html")
++@csrf_exempt
++def ba_lab(request):
++    name = request.POST.get('name')
++    password = request.POST.get('pass')
++    if name:
++
++
++        if request.COOKIES.get('admin') == "1":
++            return render(request, 'Lab/BrokenAccess/ba_lab.html', {"data":"Here is your Secret Key :3600"})
++        elif login.objects.filter(user=name) and login.objects.filter(password=password):
++            html = render(request, 'Lab/BrokenAccess/ba_lab.html', {"data":"Here is your Secret Key :3600"})
++            html.set_cookie("admin", "1",max_age=2);
++            return html
++        else:
++            html = render(request, 'Lab/BrokenAccess/ba_lab.html',{"data":"Welcome :"+name} )
++            html.set_cookie("admin", "0");
++            return html
++    else:
++        return render(request,'Lab/BrokenAccess/ba_lab.html',{"data":"Please Provide Credentials"})
+```
+
+review
+```
+"reviews": [
+                {
+                    "issue_text": "Detected usage of @csrf_exempt, which indicates that there is no CSRF token set for this route. This could lead to an attacker manipulating the user's account and exfiltration of private data. Instead, create a function without this decorator.",
+                    "line_number": 122,
+                    "cwe": 352,
+                    "severity": "MEDIUM"
+                },
+                {
+                    "issue_text": "Detected usage of @csrf_exempt, which indicates that there is no CSRF token set for this route. This could lead to an attacker manipulating the user's account and exfiltration of private data. Instead, create a function without this decorator.",
+                    "line_number": 125,
+                    "cwe": 352,
+                    "severity": "MEDIUM"
+                }
+            ]
+```
+</example_1>
+
+<example_2>
+```patch
+@@ -11,56 +11,56 @@ var crypto = require('crypto'),
+ var defaultSecret = 'too.short';
+ exports.defaultSecret = defaultSecret;
+ 
+-exports.hash = function(data) {
++exports.hash = function (data) {
+     return crypto.createHash('md5').update(data).digest('hex');
+ };
+ 
+-exports.cutOffPoisonNullByte = function(str) {
++exports.cutOffPoisonNullByte = function (str) {
+     var nullByte = '%00';
+     if (utils.contains(str, nullByte)) {
+         return str.substring(0, str.indexOf(nullByte));
+     }
+     return str;
+ };
+ 
+-exports.isAuthorized = function(role) {
++exports.isAuthorized = function (role) {
+     return expressJwt({secret: role || defaultSecret});
+ };
+ 
+-exports.denyAll = function() {
+-    return expressJwt({secret: ''+Math.random()});
++exports.denyAll = function () {
++    return expressJwt({secret: '' + Math.random()});
+ };
+ 
+-exports.authorize = function(user, role) {
+-    return jwt.sign(user || {}, role || defaultSecret, { expiresInMinutes: 60*5 });
++exports.authorize = function (user, role) {
++    return jwt.sign(user || {}, role || defaultSecret, { expiresInMinutes: 60 * 5 });
+ };
+ 
+-exports.sanitizeHtml = function(html) {
++exports.sanitizeHtml = function (html) {
+     return sanitizeHtml(html);
+ };
+ 
+ exports.authenticatedUsers = {
+     tokenMap: {},
+     idMap: {},
+-    put : function(token, user) {
++    put: function (token, user) {
+         this.tokenMap[token] = user;
+         this.idMap[user.data.id] = token;
+     },
+-    get: function(token) {
++    get: function (token) {
+         if (token) {
+             return this.tokenMap[utils.unquote(token)];
+         } else {
+             return undefined;
+         }
+     },
+-    tokenOf: function(user) {
++    tokenOf: function (user) {
+         if (user) {
+             return this.idMap[user.id];
+         } else {
+             return undefined;
+         }
+     },
+-    from: function(req) {
++    from: function (req) {
+         if (req.headers && req.headers.authorization) {
+             var parts = req.headers.authorization.split(' ');
+             if (parts.length === 2) {
+@@ -76,18 +76,18 @@ exports.authenticatedUsers = {
+     }
+ };
+ 
+-exports.generateCoupon = function(date, discount) {
++exports.generateCoupon = function (date, discount) {
+     var coupon = utils.toMMMYY(date) + '-' + discount;
+     return z85.encode(coupon);
+ };
+ 
+-exports.discountFromCoupon = function(coupon) {
++exports.discountFromCoupon = function (coupon) {
+     if (coupon) {
+         var decoded = z85.decode(coupon);
+         if (decoded && hasValidFormat(decoded.toString())) {
+             var parts = decoded.toString().split('-');
+             var validity = parts[0];
+-            if (utils.toMMMYY(new Date())=== validity) {
++            if (utils.toMMMYY(new Date()) === validity) {
+                 var discount = parts[1];
+                 return parseInt(discount);
+             }
+@@ -99,3 +99,18 @@ exports.discountFromCoupon = function(coupon) {
+ function hasValidFormat(coupon) {
+     return coupon.match(/(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)[0-9]{2}-[0-9]{2}/);
+ }
++
++var redirectWhitelist = [
++    'https://github.com/bkimminich/juice-shop',
++    'https://blockchain.info/address/1FXJq5yVANLzR6ZWfqPKhJU3zWT3apnxmN',
++    'https://gratipay.com/bkimminich'
++];
++exports.redirectWhitelist = redirectWhitelist;
++
++exports.isRedirectAllowed = function(url) {
++    var allowed = false;
++    redirectWhitelist.forEach(function(allowedUrl) {
++        allowed = allowed || url.indexOf(allowedUrl) > -1;
++    });
++    return allowed;
++};
+\ No newline at end of file
+```
+
+review
+```
+"reviews": [
+                {
+                    "issue_text": "No token revoking configured for `express-jwt`. A leaked token could still be used and unable to be revoked. Consider using function as the `isRevoked` option.",
+                    "line_number": 31,
+                    "cwe": 522,
+                    "severity": "MEDIUM"
+                },
+                {
+                    "issue_text": "A hard-coded credential was detected. It is not recommended to store credentials in source-code, as this risks secrets being leaked and used by either an internal or external malicious adversary. It is recommended to use environment variables to securely provide credentials or retrieve credentials from a secure vault or HSM (Hardware Security Module).",
+                    "line_number": 35,
+                    "cwe": 798,
+                    "severity": "MEDIUM"
+                }
+            ]
+        }
+```
+</example_2>
+
+<example_3>
+```patch
+@@ -51,16 +51,16 @@ exports.serveEasterEgg = function() {
+ };
+ 
+ exports.performRedirect = function() {
+-    return function(req, res) {
+-        var to = req.query.to;
+-        var githubUrl = 'https://github.com/bkimminich/juice-shop';
+-        if (to.indexOf(githubUrl) > -1) {
+-            if (utils.notSolved(challenges.redirectChallenge) && to !== githubUrl) { // TODO Instead match against something like <anotherUrl>[?&]=githubUrl
++    return function(req, res, next) {
++        var toUrl = req.query.to;
++        if (insecurity.isRedirectAllowed(toUrl)) {
++            if (utils.notSolved(challenges.redirectChallenge) && insecurity.redirectWhitelist.indexOf(toUrl) === -1) {
+                 utils.solve(challenges.redirectChallenge);
+             }
+-            res.redirect(to);
++            res.redirect(toUrl);
+         } else {
+-            res.redirect(githubUrl);
++            res.status(406);
++            next(new Error('Unrecognized target URL for redirect: ' + toUrl));
+         }
+     };
+ };
+\ No newline at end of file
+```
+
+review
+```
+"reviews": [
+                {
+                    "issue_text": "It looks like 'toUrl' is read from user input and it is used to as a redirect. Ensure 'toUrl' is not externally controlled, otherwise this is an open redirect.",
+                    "line_number": 60,
+                    "cwe": 601,
+                    "severity": "LOW"
+                }
+            ]
+```
+</example_3>
+
+<example_4>
+```patch
+@@ -19,8 +19,8 @@ angular.module('myApp').factory('BasketService', ['$$http', function ($$http) {
+         return $$http.delete(host + '/' + id);
+     }
+ 
+-    function order(id) {
+-        return $$http.post('/rest/basket/'+id+'/order');
++    function checkout(id) {
++        return $$http.post('/rest/basket/'+id+'/checkout');
+     }
+ 
+     function save(params) {
+@@ -32,7 +32,7 @@ angular.module('myApp').factory('BasketService', ['$$http', function ($$http) {
+         get: get,
+         put: put,
+         del: del,
+-        order: order,
++        checkout: checkout,
+         save: save
+     };
+ }]);
+\ No newline at end of file
+```
+
+review
+```
+"reviews": []
+```
+</example_4>
+
+As we can see, below are some important points to consider from examples above
+1. The reviews are always returned as a valid JSON object. Please look at below formatting instructions for more details
+2. If no review is required, return empty list (as mentioned in example_4) rather than making up reviews for the sake of it
+
+$format_instructions
+
+```patch
+$code_patch
+```
