@@ -263,8 +263,9 @@ review
 </example_4>
 
 As we can see, below are some important points to consider from examples above
-1. The reviews are always returned as a valid JSON object. Please look at below formatting instructions for more details
-2. If no review is required, return empty list (as mentioned in example_4) rather than making up reviews for the sake of it
+- **IMPORTANT** The output is always a valid JSON object. Please look at below formatting instructions for more details
+- Do not start by describing your thought. Instead, mention your thought in the key "thought" of the response dictionary. Remember, the only valid response is a valid JSON response.
+- If no review is required, return empty list (as mentioned in example_4) rather than making up reviews for the sake of it
 
 $format_instructions
 

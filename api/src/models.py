@@ -29,6 +29,7 @@ class File(BaseModel):
 
 
 class PullRequest(BaseModel):
+    id: int
     files: List[File] = []
     base: str | None = Field(description="Base sha of the PR", default=None)
     diff: str | None = Field(description="Diff of the PR", default=None)

@@ -7,7 +7,7 @@ from api.src.models import Models
 
 
 def get_result_row():
-    with open('api/evaluate/results.jsonl', 'r') as result_file:
+    with open('api/evaluate/results_v1.jsonl', 'r') as result_file:
         for line in result_file:
             yield json.loads(line)
 

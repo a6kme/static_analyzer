@@ -29,7 +29,7 @@ class GithubService:
         g_pr = g_repo.get_pull(pr_number)
         g_files_changed = g_pr.get_files()
 
-        pr = PullRequest()
+        pr = PullRequest(id=pr_number)
         pr.repo = repo
         pr.base = g_pr.base.sha
 

@@ -1,0 +1,276 @@
+You will be provided with a file patch of a github pull request. You are requested to identify CWE vulnerabilities in the given patch file.
+Below are some examples to illustrate the task.
+
+<example_1>
+```patch
+1 @@ -115,3 +115,29 @@ def xxe_parse(request):
+2      p=comments.objects.filter(id=1).update(comment=text);
+3  
+4      return render(request, 'Lab/XXE/xxe_lab.html')
+5 +
+6 +
+7 +
+8 +#***************************************************************Broken Access Control************************************************************#
+9 +@csrf_exempt
+10 +def ba(request):
+11 +    return render(request,"Lab/BrokenAccess/ba.html")
+12 +@csrf_exempt
+13 +def ba_lab(request):
+14 +    name = request.POST.get('name')
+15 +    password = request.POST.get('pass')
+16 +    if name:
+17 +
+18 +
+19 +        if request.COOKIES.get('admin') == "1":
+20 +            return render(request, 'Lab/BrokenAccess/ba_lab.html', {"data":"Here is your Secret Key :3600"})
+21 +        elif login.objects.filter(user=name) and login.objects.filter(password=password):
+22 +            html = render(request, 'Lab/BrokenAccess/ba_lab.html', {"data":"Here is your Secret Key :3600"})
+23 +            html.set_cookie("admin", "1",max_age=2);
+24 +            return html
+25 +        else:
+26 +            html = render(request, 'Lab/BrokenAccess/ba_lab.html',{"data":"Welcome :"+name} )
+27 +            html.set_cookie("admin", "0");
+28 +            return html
+29 +    else:
+30 +        return render(request,'Lab/BrokenAccess/ba_lab.html',{"data":"Please Provide Credentials"})
+```
+
+review
+```
+"reviews": [
+                {
+                    "issue_text": "Detected usage of @csrf_exempt, which indicates that there is no CSRF token set for this route. This could lead to an attacker manipulating the user's account and exfiltration of private data. Instead, create a function without this decorator.",
+                    "line_number": 9,
+                    "cwe": 352,
+                    "severity": "MEDIUM"
+                },
+                {
+                    "issue_text": "Detected usage of @csrf_exempt, which indicates that there is no CSRF token set for this route. This could lead to an attacker manipulating the user's account and exfiltration of private data. Instead, create a function without this decorator.",
+                    "line_number": 12,
+                    "cwe": 352,
+                    "severity": "MEDIUM"
+                }
+            ]
+```
+</example_1>
+
+<example_2>
+```patch
+1 @@ -11,56 +11,56 @@ var crypto = require('crypto'),
+2  var defaultSecret = 'too.short';
+3  exports.defaultSecret = defaultSecret;
+4  
+5 -exports.hash = function(data) {
+6 +exports.hash = function (data) {
+7      return crypto.createHash('md5').update(data).digest('hex');
+8  };
+9  
+10 -exports.cutOffPoisonNullByte = function(str) {
+11 +exports.cutOffPoisonNullByte = function (str) {
+12      var nullByte = '%00';
+13      if (utils.contains(str, nullByte)) {
+14          return str.substring(0, str.indexOf(nullByte));
+15      }
+16      return str;
+17  };
+18  
+19 -exports.isAuthorized = function(role) {
+20 +exports.isAuthorized = function (role) {
+21      return expressJwt({secret: role || defaultSecret});
+22  };
+23  
+24 -exports.denyAll = function() {
+25 -    return expressJwt({secret: ''+Math.random()});
+26 +exports.denyAll = function () {
+27 +    return expressJwt({secret: '' + Math.random()});
+28  };
+29  
+30 -exports.authorize = function(user, role) {
+31 -    return jwt.sign(user || {}, role || defaultSecret, { expiresInMinutes: 60*5 });
+32 +exports.authorize = function (user, role) {
+33 +    return jwt.sign(user || {}, role || defaultSecret, { expiresInMinutes: 60 * 5 });
+34  };
+35  
+36 -exports.sanitizeHtml = function(html) {
+37 +exports.sanitizeHtml = function (html) {
+38      return sanitizeHtml(html);
+39  };
+40  
+41  exports.authenticatedUsers = {
+42      tokenMap: {},
+43      idMap: {},
+44 -    put : function(token, user) {
+45 +    put: function (token, user) {
+46          this.tokenMap[token] = user;
+47          this.idMap[user.data.id] = token;
+48      },
+49 -    get: function(token) {
+50 +    get: function (token) {
+51          if (token) {
+52              return this.tokenMap[utils.unquote(token)];
+53          } else {
+54              return undefined;
+55          }
+56      },
+57 -    tokenOf: function(user) {
+58 +    tokenOf: function (user) {
+59          if (user) {
+60              return this.idMap[user.id];
+61          } else {
+62              return undefined;
+63          }
+64      },
+65 -    from: function(req) {
+66 +    from: function (req) {
+67          if (req.headers && req.headers.authorization) {
+68              var parts = req.headers.authorization.split(' ');
+69              if (parts.length === 2) {
+70 @@ -76,18 +76,18 @@ exports.authenticatedUsers = {
+71      }
+72  };
+73  
+74 -exports.generateCoupon = function(date, discount) {
+75 +exports.generateCoupon = function (date, discount) {
+76      var coupon = utils.toMMMYY(date) + '-' + discount;
+77      return z85.encode(coupon);
+78  };
+79  
+80 -exports.discountFromCoupon = function(coupon) {
+81 +exports.discountFromCoupon = function (coupon) {
+82      if (coupon) {
+83          var decoded = z85.decode(coupon);
+84          if (decoded && hasValidFormat(decoded.toString())) {
+85              var parts = decoded.toString().split('-');
+86              var validity = parts[0];
+87 -            if (utils.toMMMYY(new Date())=== validity) {
+88 +            if (utils.toMMMYY(new Date()) === validity) {
+89                  var discount = parts[1];
+90                  return parseInt(discount);
+91              }
+92 @@ -99,3 +99,18 @@ exports.discountFromCoupon = function(coupon) {
+93  function hasValidFormat(coupon) {
+94      return coupon.match(/(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)[0-9]{2}-[0-9]{2}/);
+95  }
+96 +
+97 +var redirectWhitelist = [
+98 +    'https://github.com/bkimminich/juice-shop',
+99 +    'https://blockchain.info/address/1FXJq5yVANLzR6ZWfqPKhJU3zWT3apnxmN',
+100 +    'https://gratipay.com/bkimminich'
+101 +];
+102 +exports.redirectWhitelist = redirectWhitelist;
+103 +
+104 +exports.isRedirectAllowed = function(url) {
+105 +    var allowed = false;
+106 +    redirectWhitelist.forEach(function(allowedUrl) {
+107 +        allowed = allowed || url.indexOf(allowedUrl) > -1;
+108 +    });
+109 +    return allowed;
+110 +};
+111 \ No newline at end of file
+```
+
+review
+```
+"reviews": [
+                {
+                    "issue_text": "No token revoking configured for `express-jwt`. A leaked token could still be used and unable to be revoked. Consider using function as the `isRevoked` option.",
+                    "line_number": 27,
+                    "cwe": 522,
+                    "severity": "MEDIUM"
+                },
+                {
+                    "issue_text": "A hard-coded credential was detected. It is not recommended to store credentials in source-code, as this risks secrets being leaked and used by either an internal or external malicious adversary. It is recommended to use environment variables to securely provide credentials or retrieve credentials from a secure vault or HSM (Hardware Security Module).",
+                    "line_number": 33,
+                    "cwe": 798,
+                    "severity": "MEDIUM"
+                }
+            ]
+        }
+```
+</example_2>
+
+<example_3>
+```patch
+1 @@ -51,16 +51,16 @@ exports.serveEasterEgg = function() {
+2  };
+3  
+4  exports.performRedirect = function() {
+5 -    return function(req, res) {
+6 -        var to = req.query.to;
+7 -        var githubUrl = 'https://github.com/bkimminich/juice-shop';
+8 -        if (to.indexOf(githubUrl) > -1) {
+9 -            if (utils.notSolved(challenges.redirectChallenge) && to !== githubUrl) { // TODO Instead match against something like <anotherUrl>[?&]=githubUrl
+10 +    return function(req, res, next) {
+11 +        var toUrl = req.query.to;
+12 +        if (insecurity.isRedirectAllowed(toUrl)) {
+13 +            if (utils.notSolved(challenges.redirectChallenge) && insecurity.redirectWhitelist.indexOf(toUrl) === -1) {
+14                  utils.solve(challenges.redirectChallenge);
+15              }
+16 -            res.redirect(to);
+17 +            res.redirect(toUrl);
+18          } else {
+19 -            res.redirect(githubUrl);
+20 +            res.status(406);
+21 +            next(new Error('Unrecognized target URL for redirect: ' + toUrl));
+22          }
+23      };
+24  };
+25 \ No newline at end of file
+```
+
+review
+```
+"reviews": [
+                {
+                    "issue_text": "It looks like 'toUrl' is read from user input and it is used to as a redirect. Ensure 'toUrl' is not externally controlled, otherwise this is an open redirect.",
+                    "line_number": 11,
+                    "cwe": 601,
+                    "severity": "LOW"
+                }
+            ]
+```
+</example_3>
+
+<example_4>
+```patch
+1 @@ -19,8 +19,8 @@ angular.module('myApp').factory('BasketService', ['$$http', function ($$http) {
+2          return $$http.delete(host + '/' + id);
+3      }
+4  
+5 -    function order(id) {
+6 -        return $$http.post('/rest/basket/'+id+'/order');
+7 +    function checkout(id) {
+8 +        return $$http.post('/rest/basket/'+id+'/checkout');
+9      }
+10  
+11      function save(params) {
+12 @@ -32,7 +32,7 @@ angular.module('myApp').factory('BasketService', ['$$http', function ($$http) {
+13          get: get,
+14          put: put,
+15          del: del,
+16 -        order: order,
+17 +        checkout: checkout,
+18          save: save
+19      };
+20  }]);
+21 \ No newline at end of file
+```
+
+review
+```
+"reviews": []
+```
+</example_4>
+
+As we can see from the examples above, below are some important points to consider while you think
+- **IMPORTANT** The output is always a valid JSON object. Please look at below formatting instructions for more details
+- Do not start by describing your thought. Instead, mention your thought in the key "thought" of the response dictionary. Remember, the only valid response is a valid JSON response.
+- The line numbers in the beginnging of the patch is acting as a hint for mentioning it in the response. Those line numbers are not part of the diff
+- Only consider newly added code in the patch (code that starts with + in the diff format)
+- If no review is required, return empty list (as mentioned in example_4) rather than making up reviews for the sake of it
+
+$format_instructions
+
+```patch
+$code_patch
+```

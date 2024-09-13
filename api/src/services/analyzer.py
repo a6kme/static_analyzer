@@ -183,6 +183,7 @@ class StaticAnalyzerService:
     def _line_annotations_from_patch(self, patch: str):
         """
             Parse the patch and return the line numbers that have been added or modified
+            TODO: Not sure if this is the right place for this function
         """
         lines = patch.splitlines()
         line_annotations = {}
