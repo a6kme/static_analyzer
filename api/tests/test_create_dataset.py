@@ -1,9 +1,8 @@
 import tempfile
 import unittest
 
-from api.evaluate.create_dataset import GenerateDataset
+from api.evaluate.generate_dataset import GenerateDataset
 from api.src.models import GithubRepo
-from api.tests import test_vcr
 
 
 class TestDatasetCreation(unittest.TestCase):
